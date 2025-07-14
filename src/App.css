@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333e2c;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: auto;
+}
+
+img::selection {
+  background: none;
+}
+
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.customEffect {
+  position: relative;
+  overflow: hidden;
+}
+
+.customEffect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: #161616bb;
+  transition: all 0.4s ease-in-out;
+}
+
+.customEffect:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.customEffect span {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
