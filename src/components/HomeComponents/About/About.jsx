@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import { motion } from "framer-motion";
 
 import banner from "../../../assets/banner.png";
-import banner2 from "../../../assets/banner2.png";
+// import banner2 from "../../../assets/banner2.png";
 import banner3 from "../../../assets/banner3.png";
 import banner4 from "../../../assets/banner4.png";
 
@@ -17,11 +17,11 @@ const About = () => {
   return (
     <div className="w-full mx-auto pt-30 relative">
       <img src={banner} alt="banner" className="absolute right-0 top-1 w-57" />
-      <img
+      {/* <img
         src={banner2}
         alt="banner2"
         className="absolute left-0 -top-5 w-50 hidden md:block"
-      />
+      /> */}
       <section className="relative h-[550px] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed z-0"
