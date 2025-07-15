@@ -37,7 +37,7 @@ const About = () => {
       </section>
 
       <section
-        className="max-w-7xl mx-auto py-30 px-4 sm:px-6 lg:px-8 bg-white md:px-20 text-gray-800 relative"
+        className="max-w-7xl mx-auto py-30 px-4 sm:px-6 lg:px-8 md:px-20 text-gray-800 relative"
         data-aos="fade-right"
         data-aos-anchor-placement="top-bottom"
       >
