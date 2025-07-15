@@ -13,7 +13,6 @@ import RHero2 from "../../../assets/RHero2.png";
 import RHero3 from "../../../assets/RHero3.png";
 
 const Hero = () => {
-  const sliderRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const navigate = useNavigate();
@@ -92,7 +91,7 @@ const Hero = () => {
 
   return (
     <div className="w-full overflow-hidden">
-      <Slider ref={sliderRef} {...settings}>
+      <Slider {...settings}>
         {slides.map((slide, index) => (
           <div key={index}>
             <div

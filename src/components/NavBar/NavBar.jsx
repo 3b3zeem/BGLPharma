@@ -20,7 +20,7 @@ const NavBar = () => {
     <React.Fragment>
       {/* Main NavBar */}
       <nav
-        className={`w-full flex items-center justify-between px-0 lg:px-6 z-[100] bg-gradient-to-r from-[#1a237e] to-[#2266b3] shadow-lg backdrop-blur-md
+        className={`relative w-full flex items-center justify-between px-0 lg:px-6 z-[100] bg-gradient-to-r from-[#1a237e] to-[#2266b3] shadow-lg backdrop-blur-md
         `}
       >
         <div className="flex items-center">
@@ -78,7 +78,7 @@ const NavBar = () => {
             <span className="flex items-center">
               PRODUCT <ChevronDown size={16} className="ml-1" />
             </span>
-            <ul className="absolute left-0 top-full bg-white text-[#270195] rounded shadow-lg mt-2 min-w-[120px] opacity-0 group-hover:opacity-100 transition-opacity z-10">
+            <ul className="absolute left-0 top-full bg-white text-[#270195] rounded shadow-lg mt-2 min-w-[120px] opacity-0 group-hover:opacity-100 transition-opacity z-[100]">
               <li className="px-4 py-2 hover:bg-[#e6f0fa] cursor-pointer">
                 Product 1
               </li>
@@ -160,7 +160,7 @@ const NavBar = () => {
             <span className="flex items-center">
               PRODUCT <ChevronDown size={16} className="ml-1" />
             </span>
-            <ul className="absolute left-0 top-full bg-white text-[#2266b3] rounded shadow-lg mt-2 min-w-[120px] opacity-0 group-hover:opacity-100 transition-opacity z-10">
+            <ul className="absolute left-0 top-full bg-white text-[#270195] rounded shadow-lg mt-2 min-w-[120px] opacity-0 group-hover:opacity-100 transition-opacity z-[300]">
               <li className="px-4 py-2 hover:bg-[#e6f0fa] cursor-pointer">
                 Product 1
               </li>
@@ -214,7 +214,7 @@ const NavBar = () => {
       {/* Overlay */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 bg-black/40 z-[150]"
+          className="fixed inset-0 bg-black/40 z-[150] cursor-pointer"
           onClick={() => setSidebarOpen(false)}
         ></div>
       )}
