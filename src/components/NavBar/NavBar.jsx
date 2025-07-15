@@ -15,30 +15,12 @@ import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <React.Fragment>
       {/* Main NavBar */}
       <nav
-        className={`fixed top-0 left-0 w-full flex items-center justify-between px-0 lg:px-6 border-b border-[#1a2c3a] z-[100] 
-          ${
-            scrolled
-              ? "bg-gradient-to-r from-[#1a237e] to-[#2266b3] shadow-lg backdrop-blur-md"
-              : "bg-black/10"
-          }
-        transition-all duration-700 ease-in-out
-          ${
-            scrolled ? "opacity-100 translate-y-0" : "opacity-80 -translate-y-2"
-          }
+        className={`w-full flex items-center justify-between px-0 lg:px-6 border-b border-[#1a2c3a] z-[100] bg-gradient-to-r from-[#1a237e] to-[#2266b3] shadow-lg backdrop-blur-md
         `}
       >
         <div className="flex items-center">
