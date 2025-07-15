@@ -120,7 +120,7 @@ const NavBar = () => {
         </div>
 
         <button
-          className="md:hidden ml-auto cursor-pointer text-white border p-1 border-white hover:bg-white hover:text-[#014caa] transition duration-300 rounded"
+          className="md:hidden ml-auto cursor-pointer text-white border p-1 border-white hover:bg-white hover:text-[#014caa] transition duration-300 rounded mr-10"
           onClick={() => setSidebarOpen(true)}
         >
           <Menu size={32} />
