@@ -8,10 +8,6 @@ import swipe2 from "../../../assets/Images/swpie2.jpg";
 import swipe3 from "../../../assets/Images/swpie3.jpg";
 import swipe4 from "../../../assets/Images/swpie4.jpg";
 
-import RHero from "../../../assets/RHero.png";
-import RHero2 from "../../../assets/RHero2.png";
-import RHero3 from "../../../assets/RHero3.png";
-
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -98,37 +94,6 @@ const Hero = () => {
               className="relative h-[500px] sm:h-[600px] md:h-[650px] lg:h-[750px] bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-              <motion.img
-                src={RHero}
-                alt="RHero"
-                className="absolute right-0 top-0 z-100"
-                animate={{
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-              <motion.img
-                key={`img1-${currentSlide}`}
-                src={RHero3}
-                alt="RHero"
-                className="absolute right-0 top-0 hidden md:block z-50"
-                initial={{ x: 100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.7, ease: "easeOut", delay: 0.6 }}
-              />
-              <motion.img
-                key={`img2-${currentSlide}`}
-                src={RHero2}
-                alt="RHero"
-                className="absolute -right-2 top-10 hidden md:block"
-                initial={{ x: 100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
-              />
               <div className="absolute inset-0 flex items-center justify-center text-center text-white bg-black/35 z-150">
                 <div className="px-4 sm:px-8 max-w-4xl mx-auto">
                   <motion.span
