@@ -20,7 +20,7 @@ const NavBar = () => {
     <React.Fragment>
       {/* Main NavBar */}
       <nav
-        className={`w-full flex items-center justify-between px-0 lg:px-6 border-b border-[#1a2c3a] z-[100] bg-gradient-to-r from-[#1a237e] to-[#2266b3] shadow-lg backdrop-blur-md
+        className={`w-full flex items-center justify-between px-0 lg:px-6 z-[100] bg-gradient-to-r from-[#1a237e] to-[#2266b3] shadow-lg backdrop-blur-md
         `}
       >
         <div className="flex items-center">

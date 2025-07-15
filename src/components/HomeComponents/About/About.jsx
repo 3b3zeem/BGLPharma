@@ -2,6 +2,12 @@ import React, { useEffect } from "react";
 import about from "../../../assets/Images/AboutHome.jpeg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { motion } from "framer-motion";
+
+import banner from "../../../assets/banner.png";
+import banner2 from "../../../assets/banner2.png";
+import banner3 from "../../../assets/banner3.png";
+import banner4 from "../../../assets/banner4.png";
 
 const About = () => {
   useEffect(() => {
@@ -9,7 +15,13 @@ const About = () => {
   }, []);
 
   return (
-    <div className="w-full mx-auto pt-30">
+    <div className="w-full mx-auto pt-30 relative">
+      <img src={banner} alt="banner" className="absolute right-0 top-1 w-57" />
+      <img
+        src={banner2}
+        alt="banner2"
+        className="absolute left-0 -top-5 w-50 hidden md:block"
+      />
       <section className="relative h-[550px] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed z-0"
@@ -37,10 +49,37 @@ const About = () => {
       </section>
 
       <section
-        className="max-w-7xl mx-auto py-30 px-4 sm:px-6 lg:px-8 bg-white md:px-20 text-gray-800"
+        className="max-w-7xl mx-auto py-30 px-4 sm:px-6 lg:px-8 bg-white md:px-20 text-gray-800 relative"
         data-aos="fade-right"
-     data-aos-anchor-placement="top-bottom"
+        data-aos-anchor-placement="top-bottom"
       >
+        <motion.img
+          src={banner3}
+          alt="banner3"
+          className="absolute top-6 right-50 rotate-40"
+          animate={{
+            x: [0, 10, 0, -10, 0],
+            y: [0, 10, 20, 10, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+        <motion.img
+          src={banner4}
+          alt="banner4"
+          className="absolute top-6 left-50"
+          animate={{
+            x: [0, 10, 0, -10, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
         <h3 className="text-xl font-[700] mb-6 text-[#3c5975]">
           BGL Pharma is a trusted global partner in chemical and natural
           ingredient supply.
