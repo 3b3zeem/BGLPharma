@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 
@@ -10,6 +11,8 @@ import swipe4 from "../../../assets/Images/swpie4.jpg";
 const Hero = () => {
   const sliderRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const navigate = useNavigate();
 
   const slides = [
     {
@@ -89,7 +92,7 @@ const Hero = () => {
         {slides.map((slide, index) => (
           <div key={index}>
             <div
-              className="relative h-[500px] sm:h-[600px] md:h-[650px] lg:h-[700px] bg-cover bg-center"
+              className="relative h-[500px] sm:h-[600px] md:h-[650px] lg:h-[750px] bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               <div className="absolute inset-0 flex items-center justify-center text-center text-white bg-black/35">
@@ -122,7 +125,8 @@ const Hero = () => {
                     {slide.description}
                   </motion.p>
                   <motion.button
-                    className="bg-[#014caa] text-white px-4 py-2 sm:px-5 sm:py-3 md:px-6 md:py-4 rounded text-base sm:text-lg"
+                    className="bg-[#014caa] text-white px-4 py-2 sm:px-5 sm:py-3 md:px-6 md:py-4 rounded text-base sm:text-lg cursor-pointer customEffect"
+                    onClick={() => navigate("/about")}
                     key={currentSlide + "-btn"}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}

@@ -9,16 +9,38 @@ import {
   Facebook,
   Linkedin,
   Youtube,
+  PhoneCall,
 } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <React.Fragment>
       {/* Main NavBar */}
-      <nav className="fixed top-0 left-0 w-full bg-transparent text-white flex items-center justify-between px-6 border-b border-[#1a2c3a] z-[100] overflow-hidden">
+      <nav
+        className={`fixed top-0 left-0 w-full flex items-center justify-between px-0 lg:px-6 border-b border-[#1a2c3a] z-[100] 
+          ${
+            scrolled
+              ? "bg-gradient-to-r from-[#1a237e] to-[#2266b3] shadow-lg backdrop-blur-md"
+              : "bg-black/10"
+          }
+        transition-all duration-700 ease-in-out
+          ${
+            scrolled ? "opacity-100 translate-y-0" : "opacity-80 -translate-y-2"
+          }
+        `}
+      >
         <div className="flex items-center">
           <img src="/logo.png" alt="Logo" width={150} />
         </div>
@@ -29,8 +51,8 @@ const NavBar = () => {
             className={({ isActive }) =>
               `cursor-pointer transition-colors duration-200 px-2 py-1 rounded-lg ${
                 isActive
-                  ? "bg-white bg-opacity-10 text-[#014caa] shadow"
-                  : "hover:text-[#014caa] text-[#5bb3f0]"
+                  ? "bg-white bg-opacity-10 text-[#270195] shadow"
+                  : "hover:text-[#270195] text-white"
               }`
             }
             end
@@ -42,15 +64,15 @@ const NavBar = () => {
             className={({ isActive }) =>
               `relative group cursor-pointer transition-colors duration-200 px-2 py-1 rounded-lg ${
                 isActive
-                  ? "bg-white bg-opacity-10 text-[#014caa] shadow"
-                  : "hover:text-[#014caa] text-[#5bb3f0]"
+                  ? "bg-white bg-opacity-10 text-[#270195] shadow"
+                  : "hover:text-[#270195] text-white"
               }`
             }
           >
             <span className="flex items-center">
               PRODUCT <ChevronDown size={16} className="ml-1" />
             </span>
-            <ul className="absolute left-0 top-full bg-white text-[#014caa] rounded shadow-lg mt-2 min-w-[120px] opacity-0 group-hover:opacity-100 transition-opacity z-10">
+            <ul className="absolute left-0 top-full bg-white text-[#270195] rounded shadow-lg mt-2 min-w-[120px] opacity-0 group-hover:opacity-100 transition-opacity z-10">
               <li className="px-4 py-2 hover:bg-[#e6f0fa] cursor-pointer">
                 Product 1
               </li>
@@ -64,8 +86,8 @@ const NavBar = () => {
             className={({ isActive }) =>
               `cursor-pointer transition-colors duration-200 px-2 py-1 rounded-lg ${
                 isActive
-                  ? "bg-white bg-opacity-10 text-[#014caa] shadow"
-                  : "hover:text-[#014caa] text-[#5bb3f0]"
+                  ? "bg-white bg-opacity-10 text-[#270195] shadow"
+                  : "hover:text-[#270195] text-white"
               }`
             }
           >
@@ -76,8 +98,8 @@ const NavBar = () => {
             className={({ isActive }) =>
               `cursor-pointer transition-colors duration-200 px-2 py-1 rounded-lg ${
                 isActive
-                  ? "bg-white bg-opacity-10 text-[#014caa] shadow"
-                  : "hover:text-[#014caa] text-[#5bb3f0]"
+                  ? "bg-white bg-opacity-10 text-[#270195] shadow"
+                  : "hover:text-[#270195] text-white"
               }`
             }
           >
@@ -85,9 +107,15 @@ const NavBar = () => {
           </NavLink>
         </ul>
 
-        <div className="hidden md:flex gap-8 items-center">
-          <span className="flex items-center gap-2 text-[#5bb3f0] font-semibold">
-            <Phone size={16} /> +201091040946 +201023150519 +201094400759
+        <div className="hidden lg:flex gap-8 items-center">
+          <span className="flex items-center gap-2 text-white font-semibold">
+            <span className="bg-[#270195] w-10 h-10 lg:w-15 lg:h-15 rounded-full border-3 border-[#918ca1] flex justify-center items-center transition duration-300">
+              <PhoneCall className="w-3 h-3 lg:w-6 lg:h-6" />
+            </span>
+            <div className="flex flex-col gap-2">
+              <span>Call Us</span>
+              +201091040946 +201023150519 +201094400759
+            </div>
           </span>
         </div>
 
