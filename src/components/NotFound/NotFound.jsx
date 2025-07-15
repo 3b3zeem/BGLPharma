@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // import { useTranslation } from "react-i18next";
 
 const colors = {
-  primary: "#333e2c",
+  primary: "#2266b3",
   lightText: "#ffffff",
   productTitle: "#4b5563",
   productName: "#6b7280",
@@ -31,7 +31,7 @@ const NotFound = () => {
             className="text-xl font-semibold"
             style={{ color: colors.productTitle }}
           >
-            pageNotFound
+            page Not Found
           </span>
           <div className="flex items-center space-x-2">
             <Link to="/">
@@ -61,7 +61,7 @@ const NotFound = () => {
             fontFamily: "'Poppins', sans-serif",
           }}
         >
-          pageNotFound
+          page Not Found
         </span>
         <p
           className="text-center text-lg"
@@ -73,7 +73,7 @@ const NotFound = () => {
           className="text-center text-lg mb-6"
           style={{ color: colors.productName }}
         >
-          exploreSolutions
+          explore Solutions
         </p>
 
         <Link
@@ -81,7 +81,7 @@ const NotFound = () => {
           className="px-5 py-3 text-md font-medium rounded shadow-md customEffect"
           style={{ backgroundColor: colors.primary, color: colors.lightText }}
         >
-          <span>backToHome</span>
+          <span>back To Home</span>
         </Link>
       </div>
     </div>

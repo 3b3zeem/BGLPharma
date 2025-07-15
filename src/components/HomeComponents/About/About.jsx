@@ -1,45 +1,80 @@
-import React from "react";
+import React, { useEffect } from "react";
 import about from "../../../assets/Images/AboutHome.jpeg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <div className="w-full mx-auto py-20">
-      <section class="relative h-[550px] overflow-hidden">
+    <div className="w-full mx-auto pt-30">
+      <section className="relative h-[550px] overflow-hidden">
         <div
-          class="absolute inset-0 bg-cover bg-center bg-fixed z-0"
+          className="absolute inset-0 bg-cover bg-center bg-fixed z-0"
           style={{ backgroundImage: `url(${about})` }}
         ></div>
 
-        <div class="relative z-10 flex items-center justify-center h-full px-4">
-          <div class="bg-[#3c5975]/50  text-center p-8 rounded-lg max-w-2xl text-white">
-            <h2 class="text-5xl font-bold mb-4 text-[#270195]">About Rivita</h2>
-            <p class="text-lg font-medium">
-              Rivita distributes high-quality chemical and natural ingredients
-              worldwide.
+        <div className="relative z-10 flex items-center justify-center h-full px-4">
+          <div className="bg-[#3c5975]/50  text-center p-8 rounded-lg max-w-2xl text-white">
+            <h2
+              className="text-5xl font-bold mb-4 text-[#270195]"
+              data-aos="fade-right"
+              data-aos-delay="0"
+            >
+              About BGL Pharma
+            </h2>
+            <p
+              className="text-lg font-medium"
+              data-aos="fade-left"
+              data-aos-delay="250"
+            >
+              Your Trusted Partner in Pharmaceutical Ingredients.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto py-30 px-4 sm:px-6 lg:px-8 bg-white md:px-20 text-gray-800">
+      <section
+        className="max-w-7xl mx-auto py-30 px-4 sm:px-6 lg:px-8 bg-white md:px-20 text-gray-800"
+        data-aos="fade-right"
+     data-aos-anchor-placement="top-bottom"
+      >
         <h3 className="text-xl font-[700] mb-6 text-[#3c5975]">
-          Rivita distributes high-quality chemical and natural ingredients
-          worldwide.
+          BGL Pharma is a trusted global partner in chemical and natural
+          ingredient supply.
         </h3>
         <p className="mb-4 text-[#3c5975] space-x-0.5 break-all tracking-wider">
-          We focus on the optimization of the supply chain of feed additives, food additives, cosmetic ingredients, Active Pharmaceutical Ingredients (API) and intermediates, and natural plant extracts. We are committed to providing cost-effective high-quality chemical ingredients to worldwide clients in the feed, food, cosmetics, and pharmaceutical industry.
+          BGL Pharma specializes in the optimization of the global supply chain
+          for feed additives, food additives, cosmetic ingredients, Active
+          Pharmaceutical Ingredients (APIs), intermediates, and natural plant
+          extracts. We are dedicated to providing cost-effective, high-quality
+          chemical ingredients to clients in the feed, food, cosmetics, and
+          pharmaceutical industries.
         </p>
         <p className="mb-4 text-[#3c5975] space-x-0.5 break-all tracking-wider">
-          With 20 years of industry experience, we have a profound understanding of the revolution of the worldwide market and rich experience. Combined with timely access to raw material industry information and comprehensive data analysis ability, we are able to provide not only the products but also a reliable forecast of market trends.
+          With over 7 years of experience in international trading, BGL Pharma
+          has developed a strong understanding of global market trends and
+          supply dynamics. Leveraging real-time access to raw material insights
+          and deep industry analysis, we offer not only reliable products but
+          also strategic market intelligence and forecasting to support our
+          clients’ decisions.
         </p>
         <p className="mb-4 text-[#3c5975] space-x-0.5 break-all tracking-wider">
-         We have established solid supply relationships with all the leading vitamins, amino acids, APIs, and special additive manufacturers in China. With great support and service from our suppliers, we are able to provide timely and excellent service to our clients.
+          We are proud to maintain long-term partnerships with leading
+          manufacturers in China, India, Europe, and the USA, allowing us to
+          ensure stable supply, consistent quality, and competitive pricing
+          across our entire product range.
         </p>
         <p className="mb-4 text-[#3c5975] space-x-0.5 break-all tracking-wider">
-          We already expanded our business to more than 120 countries and regions with our high-quality chemical raw material products and attentive services.
+          Today, BGL Pharma serves over 120 customers across various regions,
+          delivering value through responsiveness, transparency, and trust.
         </p>
         <p className="text-[#3c5975] space-x-0.5 break-all tracking-wider">
-          Continuously optimizing the chemical and natural material supply chain and ensuring a stable supply of high-quality products for customers is our core business.
+          Our core mission is to continuously optimize the chemical and natural
+          material supply chain, securing a stable and high-quality source of
+          products to empower our clients’ continued success.
         </p>
       </section>
     </div>
