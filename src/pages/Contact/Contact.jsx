@@ -209,6 +209,19 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      <div className="w-full mt-20">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d8867.433894820337!2d31.738768862799347!3d30.310811673946002!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDE4JzM5LjgiTiAzMcKwNDQnMjAuNSJF!5e1!3m2!1sen!2sus!4v1752672332513!5m2!1sen!2sus"
+          width="100%"
+          height="550"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Google Map"
+        ></iframe>
+      </div>
     </div>
   );
 };
