@@ -213,7 +213,7 @@ const Footer = () => {
               />
             </div>
 
-            <div>
+            {/* <div>
               <label className="block text-white text-sm font-medium mb-2">
                 Website
               </label>
@@ -253,7 +253,7 @@ const Footer = () => {
                 placeholder="Company"
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:border-white/50 focus:bg-white/15 transition-all duration-300"
               />
-            </div>
+            </div> */}
 
             <div>
               <label className="block text-white text-sm font-medium mb-2">

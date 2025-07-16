@@ -11,10 +11,14 @@ import {
   Youtube,
   PhoneCall,
 } from "lucide-react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const NavBar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const location = useLocation();
+  const isActiveParent =
+    location.pathname.startsWith("/Product1") ||
+    location.pathname.startsWith("/Product2")
 
   return (
     <React.Fragment>
@@ -28,6 +32,7 @@ const NavBar = () => {
         </div>
 
         <ul className="hidden md:flex gap-8 items-center font-bold">
+          {/* Home */}
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -41,6 +46,7 @@ const NavBar = () => {
           >
             HOME
           </NavLink>
+          {/* About */}
           <NavLink
             to="/about"
             className={({ isActive }) =>
@@ -53,6 +59,7 @@ const NavBar = () => {
           >
             ABOUT US
           </NavLink>
+          {/* Contact */}
           <NavLink
             to="/contact"
             className={({ isActive }) =>
@@ -65,28 +72,47 @@ const NavBar = () => {
           >
             CONTACT
           </NavLink>
-          <NavLink
-            to="/products"
-            className={({ isActive }) =>
-              `relative group cursor-pointer transition-colors duration-200 px-2 py-1 rounded-lg ${
-                isActive
+          {/* Products */}
+          <div className="relative group">
+            <span
+              className={`transition-colors duration-200 px-2 py-1 rounded-lg flex items-center ${
+                isActiveParent
                   ? "bg-white bg-opacity-10 text-[#270195] shadow"
                   : "hover:text-[#270195] text-white"
-              }`
-            }
-          >
-            <span className="flex items-center">
+              }`}
+            >
               PRODUCT <ChevronDown size={16} className="ml-1" />
             </span>
-            <ul className="absolute left-0 top-full bg-white text-[#270195] rounded shadow-lg mt-2 min-w-[120px] opacity-0 group-hover:opacity-100 transition-opacity z-[100]">
-              <li className="px-4 py-2 hover:bg-[#e6f0fa] cursor-pointer">
-                Product 1
-              </li>
-              <li className="px-4 py-2 hover:bg-[#e6f0fa] cursor-pointer">
-                Product 2
-              </li>
-            </ul>
-          </NavLink>
+
+            <div className="pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 opacity-0 transition-opacity duration-300 absolute -left-5 top-full z-[100]">
+              <ul className="bg-white text-[#270195] rounded shadow-lg mt-2 min-w-[140px]">
+                <li>
+                  <Link
+                    to="/Product1"
+                    className={`block px-4 py-2 transition-colors duration-200 ${
+                      location.pathname === "/Product1"
+                        ? "bg-[#e6f0fa] font-semibold"
+                        : "hover:bg-[#e6f0fa]"
+                    }`}
+                  >
+                    Product 1
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/Product2"
+                    className={`block px-4 py-2 transition-colors duration-200 ${
+                      location.pathname === "/Product2"
+                        ? "bg-[#e6f0fa] font-semibold"
+                        : "hover:bg-[#e6f0fa]"
+                    }`}
+                  >
+                    Product 2
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </ul>
 
         <div className="hidden lg:flex gap-8 items-center">
