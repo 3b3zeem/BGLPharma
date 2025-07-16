@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Clock,
   Phone,
@@ -12,28 +12,37 @@ import {
   Youtube,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
+import useContact from "../../Hooks/useContact";
 
 const Footer = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    website: "",
-    country: "",
-    company: "",
-    message: "",
-  });
+  const formRef = useRef(null);
+  const { data, loading, error, sendContact } = useContact();
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+  const lastToast = useRef({ error: null, message: null });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target.elements.name.value.trim();
+    const email = e.target.elements.email.value.trim();
+    const message = e.target.elements.message.value.trim();
+    if (!name || !email || !message) return;
+    sendContact(name, email, message);
   };
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
-  };
+  useEffect(() => {
+    if (error && error !== lastToast.current.error) {
+      toast.error(error);
+      lastToast.current.error = error;
+    }
+    if (data && data.message && data.message !== lastToast.current.message) {
+      toast.success(data.message);
+      lastToast.current.message = data.message;
+      if (formRef.current) {
+        formRef.current.reset();
+      }
+    }
+  }, [error, data]);
 
   const navigationLinks = [
     { name: "HOME", href: "/" },
@@ -158,8 +167,20 @@ const Footer = () => {
               <p className="text-white font-semibold">
                 Questions? Send us an email.
               </p>
-              <h3 className="text-white/80 text-sm">- info@bglpharma.com</h3>
-              <h3 className="text-white/80 text-sm">- sales@bglpharma.com</h3>
+              <div className="flex flex-col gap-1">
+                <a
+                href="mailto:info@bglpharma.com"
+                className="text-white/80 text-sm"
+              >
+                - info@bglpharma.com
+              </a>
+              <a
+                href="mailto:sales@bglpharma.com"
+                className="text-white/80 text-sm"
+              >
+                - sales@bglpharma.com
+              </a>
+              </div>
             </div>
           </div>
 
@@ -182,7 +203,12 @@ const Footer = () => {
         </div>
 
         {/* Contact and Form Section */}
-        <div className="flex flex-col gap-8 flex-1 min-w-[260px] max-w-[400px]">
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-8 flex-1 min-w-[260px] max-w-[400px]"
+          autoComplete="off"
+        >
           {/* Contact Form */}
           <div className="grid gap-4">
             <div>
@@ -192,8 +218,7 @@ const Footer = () => {
               <input
                 type="text"
                 name="name"
-                value={formData.name}
-                onChange={handleInputChange}
+                required
                 placeholder="Name"
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:border-white/50 focus:bg-white/15 transition-all duration-300"
               />
@@ -206,8 +231,7 @@ const Footer = () => {
               <input
                 type="email"
                 name="email"
-                value={formData.email}
-                onChange={handleInputChange}
+                required
                 placeholder="Email"
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:border-white/50 focus:bg-white/15 transition-all duration-300"
               />
@@ -261,8 +285,7 @@ const Footer = () => {
               </label>
               <textarea
                 name="message"
-                value={formData.message}
-                onChange={handleInputChange}
+                required
                 placeholder="Message"
                 rows="4"
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:border-white/50 focus:bg-white/15 transition-all duration-300 resize-vertical"
@@ -270,15 +293,15 @@ const Footer = () => {
             </div>
 
             <button
-              type="button"
-              onClick={handleSubmit}
+              type="submit"
+              disabled={loading}
               className="w-full py-3 px-6 bg-white/20 backdrop-blur-sm text-white font-bold rounded-lg hover:bg-white/30 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2 tracking-wide cursor-pointer"
             >
               <Send size={18} />
-              SEND
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </div>
-        </div>
+        </form>
       </div>
 
       {/* Footer Bottom */}

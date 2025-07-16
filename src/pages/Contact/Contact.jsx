@@ -126,12 +126,12 @@ const Contact = () => {
               </div>
               <div className="flex flex-col items-start">
                 <p className="text-md text-white/80">Make a Quote</p>
-                <p className="font-[700] sm:text-[24px] text-[14px] mt-1">
+                <a href="mailto:Info@bglpharma.com" className="font-[700] sm:text-[24px] text-[14px] mt-1">
                   Info@bglpharma.com
-                </p>
-                <p className="font-[700] sm:text-[24px] text-[14px] mt-1">
+                </a>
+                <a href="mailto:sales@bglpharma.com" className="font-[700] sm:text-[24px] text-[14px] mt-1">
                   sales@bglpharma.com
-                </p>
+                </a>
               </div>
             </div>
 
