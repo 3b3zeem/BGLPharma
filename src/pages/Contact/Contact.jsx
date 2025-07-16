@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Meta from "../../components/Meta/Meta";
 import contact from "../../assets/contact.jpg";
 import {
@@ -17,11 +17,42 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import Start from "../../assets/section-title.png";
+import useContact from "../../Hooks/useContact";
+import toast from "react-hot-toast";
 
 const Contact = () => {
+  const formRef = useRef(null);
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  const { data, loading, error, sendContact } = useContact();
+
+  const lastToast = useRef({ error: null, message: null });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target.elements.name.value.trim();
+    const email = e.target.elements.email.value.trim();
+    const message = e.target.elements.message.value.trim();
+    if (!name || !email || !message) return;
+    sendContact(name, email, message);
+  };
+
+  useEffect(() => {
+    if (error && error !== lastToast.current.error) {
+      toast.error(error);
+      lastToast.current.error = error;
+    }
+    if (data && data.message && data.message !== lastToast.current.message) {
+      toast.success(data.message);
+      lastToast.current.message = data.message;
+      if (formRef.current) {
+        formRef.current.reset();
+      }
+    }
+  }, [error, data]);
 
   return (
     <div className="w-full">
@@ -169,22 +200,31 @@ const Contact = () => {
               Contact us via our phone numbers, our headquarter and social media
             </p>
 
-            <form className="space-y-10">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="space-y-10"
+              autoComplete="off"
+            >
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="flex flex-col gap-3 md:w-1/2 w-full">
                   <label>Your Name*</label>
                   <input
                     type="text"
+                    name="name"
                     placeholder="Your Name"
                     className="border border-gray-300 px-4 py-6 w-full focus-visible:outline-none focus-visible:border-[#270195] transition duration-300"
+                    required
                   />
                 </div>
                 <div className="flex flex-col gap-3 md:w-1/2 w-full">
                   <label>Your Email*</label>
                   <input
                     type="email"
+                    name="email"
                     placeholder="Your Email"
                     className="border border-gray-300 px-4 py-6 w-full focus-visible:outline-none focus-visible:border-[#270195] transition duration-300"
+                    required
                   />
                 </div>
               </div>
@@ -192,16 +232,21 @@ const Contact = () => {
                 <label>Your Message*</label>
                 <textarea
                   rows="5"
+                  name="message"
                   placeholder="Write Message"
                   className="border border-gray-300 px-4 py-6 w-full focus-visible:outline-none focus-visible:border-[#270195] transition duration-300"
+                  required
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="bg-[#270195] text-white  customEffect cursor-pointer group transition duration-300"
+                disabled={loading}
+                className={`bg-[#270195] text-white customEffect cursor-pointer group transition duration-300 ${
+                  loading ? "opacity-60 pointer-events-none" : ""
+                }`}
               >
                 <span className="flex items-center justify-center gap-2 px-8 py-5">
-                  Send Message{" "}
+                  {loading ? "Sending..." : "Send Message"}{" "}
                   <MoveRight className="transform transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
               </button>
