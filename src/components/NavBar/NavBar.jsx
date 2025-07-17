@@ -31,7 +31,9 @@ const NavBar = () => {
         `}
       >
         <div className="flex items-center">
-          <img src="/logo.png" alt="Logo" width={150} />
+          <Link to={"/"}>
+            <img src="/logo.png" alt="Logo" width={150} />
+          </Link>
         </div>
 
         <ul className="hidden md:flex gap-8 items-center font-bold">
