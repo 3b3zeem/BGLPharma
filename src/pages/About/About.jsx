@@ -18,6 +18,8 @@ import img2 from "../../assets/About2.jpg";
 const About = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
+
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
 
   const features = [

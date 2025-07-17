@@ -10,6 +10,8 @@ import FeedBanner from "../../../assets/Products/feed.jpeg";
 const FeedAdditives = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
+
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
 
   const [expandedItems, setExpandedItems] = useState({});

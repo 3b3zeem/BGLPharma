@@ -25,6 +25,8 @@ const Contact = () => {
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
+
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
 
   const { data, loading, error, sendContact } = useContact();

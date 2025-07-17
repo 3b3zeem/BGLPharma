@@ -10,14 +10,24 @@ import {
   Twitter,
   X,
   Youtube,
+  ChevronDown,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 import useContact from "../../Hooks/useContact";
 
 const Footer = () => {
   const formRef = useRef(null);
   const { data, loading, error, sendContact } = useContact();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const location = useLocation();
+  const isActiveParent =
+    location.pathname.startsWith("/Food-Additives") ||
+    location.pathname.startsWith("/Feed-Additives") ||
+    location.pathname.startsWith("/Chemicals") ||
+    location.pathname.startsWith("/Cosmetic-Ingredients") ||
+    location.pathname.startsWith("/API-Intermediates");
 
   const lastToast = useRef({ error: null, message: null });
 
@@ -47,14 +57,7 @@ const Footer = () => {
   const navigationLinks = [
     { name: "HOME", href: "/" },
     { name: "ABOUT", href: "/about" },
-    { name: "cONTACT", href: "/contact" },
-    { name: "PRODUCTS", href: "/products" },
-    // { name: "Chemicals", href: "#chemicals" },
-    // { name: "Cosmetic Ingredients", href: "#cosmetic-ingredients" },
-    // { name: "API & Intermediates", href: "#api-intermediates" },
-    // { name: "ABOUT RIVITA", href: "#about" },
-    // { name: "NEWS", href: "#news" },
-    // { name: "Privacy Policy", href: "#privacy" },
+    { name: "CONTACT", href: "/contact" },
   ];
 
   return (
@@ -126,6 +129,87 @@ const Footer = () => {
                 {link.name}
               </Link>
             ))}
+            <div className="relative group">
+              <span
+                className={`flex items-center text-white/80 hover:text-white transition-all duration-300 py-2 border-b border-transparent hover:border-white/30 hover:translate-x-2 ${
+                  isActiveParent
+                    ? "bg-opacity-10 text-[#270195]"
+                    : "hover:text-[#270195] text-white"
+                }`}
+              >
+                PRODUCT <ChevronDown size={16} className="ml-1" />
+              </span>
+
+              <div className="pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 opacity-0 transition-opacity duration-300 absolute -left-5 top-full z-[100]">
+                <ul className="bg-white text-[#270195] rounded shadow-lg mt-2 min-w-[200px]">
+                  <li>
+                    <Link
+                      to="/Food-Additives"
+                      onClick={() => setSidebarOpen(false)}
+                      className={`block px-4 py-2 transition-colors duration-200 ${
+                        location.pathname === "/Product1"
+                          ? "bg-[#e6f0fa] font-semibold"
+                          : "hover:bg-[#e6f0fa]"
+                      }`}
+                    >
+                      Food Additives
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/Feed-Additives"
+                      onClick={() => setSidebarOpen(false)}
+                      className={`block px-4 py-2 transition-colors duration-200 ${
+                        location.pathname === "/Product2"
+                          ? "bg-[#e6f0fa] font-semibold"
+                          : "hover:bg-[#e6f0fa]"
+                      }`}
+                    >
+                      Feed Additives
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/Chemicals"
+                      onClick={() => setSidebarOpen(false)}
+                      className={`block px-4 py-2 transition-colors duration-200 ${
+                        location.pathname === "/Product2"
+                          ? "bg-[#e6f0fa] font-semibold"
+                          : "hover:bg-[#e6f0fa]"
+                      }`}
+                    >
+                      Chemicals
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/Cosmetic-Ingredients"
+                      onClick={() => setSidebarOpen(false)}
+                      className={`block px-4 py-2 transition-colors duration-200 ${
+                        location.pathname === "/Product2"
+                          ? "bg-[#e6f0fa] font-semibold"
+                          : "hover:bg-[#e6f0fa]"
+                      }`}
+                    >
+                      Cosmetic-Ingredients
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/API-Intermediates"
+                      onClick={() => setSidebarOpen(false)}
+                      className={`block px-4 py-2 transition-colors duration-200 ${
+                        location.pathname === "/Product2"
+                          ? "bg-[#e6f0fa] font-semibold"
+                          : "hover:bg-[#e6f0fa]"
+                      }`}
+                    >
+                      API & Intermediates
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -169,17 +253,17 @@ const Footer = () => {
               </p>
               <div className="flex flex-col gap-1">
                 <a
-                href="mailto:info@bglpharma.com"
-                className="text-white/80 text-sm"
-              >
-                - info@bglpharma.com
-              </a>
-              <a
-                href="mailto:sales@bglpharma.com"
-                className="text-white/80 text-sm"
-              >
-                - sales@bglpharma.com
-              </a>
+                  href="mailto:info@bglpharma.com"
+                  className="text-white/80 text-sm"
+                >
+                  - info@bglpharma.com
+                </a>
+                <a
+                  href="mailto:sales@bglpharma.com"
+                  className="text-white/80 text-sm"
+                >
+                  - sales@bglpharma.com
+                </a>
               </div>
             </div>
           </div>
