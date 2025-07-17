@@ -75,9 +75,11 @@ const Footer = () => {
         {/* Logo and Company Info Section */}
         <div className="flex flex-col gap-8 text-white flex-1 min-w-[260px] max-w-[350px]">
           <div className="space-y-6">
-            <h1 className="text-3xl lg:text-4xl font-bold tracking-wider">
-              BGL Pharma
-            </h1>
+            <div className="flex items-center">
+              <Link to={"/"}>
+                <img src="/logo.png" alt="Logo" width={120} />
+              </Link>
+            </div>
             <p className="text-md leading-relaxed text-white/90 max-w-sm">
               Your Trusted Partner in Pharmaceutical Ingredients.
             </p>
