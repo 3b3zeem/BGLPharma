@@ -1,0 +1,461 @@
+{
+  "Vitamins": [
+    {
+      "name": "Vitamin B1",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₁₂H₁₇N₅O₄S"
+        },
+        {
+          "name": "Grade: Feed, Food, Pharmaceutical"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B2",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₁₇H₂₀N₄O₆"
+        },
+        {
+          "name": "Grade: Feed, Food, Pharmaceutical"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B12",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₆₃H₈₈CoN₁₄O₁₄P"
+        },
+        {
+          "name": "Grade: Food, Feed, Pharmaceutical"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin D3",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₂₇H₄₄O"
+        },
+        {
+          "name": "Grade: Feed, Food, Pharmaceutical"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin E",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₃₁H₅₂O₃"
+        },
+        {
+          "name": "Grade: Food, Feed, Pharmaceutical"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B6"
+    }
+  ],
+  "Excipients": [
+    {
+      "name": "PVP K30",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: (C6H9NO)n"
+        },
+        {
+          "name": "Grade: Pharmaceutical"
+        }
+      ]
+    },
+    {
+      "name": "Povidone Iodine"
+    },
+    {
+      "name": "Cyclodextrin"
+    },
+    {
+      "name": "Magnesium Stearate"
+    }
+  ],
+  "Other API and intermediates": [
+    {
+      "name": "Fusidic acid"
+    },
+    {
+      "name": "Dimetridazole"
+    },
+    {
+      "name": "Milk Thistle extract"
+    },
+    {
+      "name": "Acarbose"
+    },
+    {
+      "name": "Diosmin"
+    },
+    {
+      "name": "N-Acetyl D-Glucosamine"
+    },
+    {
+      "name": "Aceclofenac"
+    },
+    {
+      "name": "Diphenhydramine HCL"
+    },
+    {
+      "name": "N-acetyl L-cysteine"
+    },
+    {
+      "name": "Acetylsalicylic Acid"
+    },
+    {
+      "name": "Doxycycline HCL"
+    },
+    {
+      "name": "N-Acetyl-DL-Methionine"
+    },
+    {
+      "name": "Aciclovir"
+    },
+    {
+      "name": "Enalapril Maleate"
+    },
+    {
+      "name": "Naproxen base/Sodium"
+    },
+    {
+      "name": "Adefovir dipivoxil"
+    },
+    {
+      "name": "Enramycin"
+    },
+    {
+      "name": "Neomycin sulphate"
+    },
+    {
+      "name": "Albendazole"
+    },
+    {
+      "name": "Enrofloxacin"
+    },
+    {
+      "name": "Paracetamol"
+    },
+    {
+      "name": "Allopurinol"
+    },
+    {
+      "name": "Enrofloxacin Base/HCL"
+    },
+    {
+      "name": "Penicillin V Potassium"
+    },
+    {
+      "name": "Alpha licpic acid"
+    },
+    {
+      "name": "Erythromycin"
+    },
+    {
+      "name": "Piracetam"
+    },
+    {
+      "name": "Ambroxol HCL"
+    },
+    {
+      "name": "Fenbendazole"
+    },
+    {
+      "name": "Policresulen"
+    },
+    {
+      "name": "Amikacin Sulphate"
+    },
+    {
+      "name": "Ferrous Gluconate"
+    },
+    {
+      "name": "Povidone Iodine"
+    },
+    {
+      "name": "Amisulpride"
+    },
+    {
+      "name": "Florfenicol"
+    },
+    {
+      "name": "Prednisone"
+    },
+    {
+      "name": "Amoxycillin Trihydrate"
+    },
+    {
+      "name": "Pregabalin"
+    },
+    {
+      "name": "Ampicillin Trihydrate"
+    },
+    {
+      "name": "Flubendazole"
+    },
+    {
+      "name": "Secnidazole"
+    },
+    {
+      "name": "Amprolium HCL"
+    },
+    {
+      "name": "Fluconazole"
+    },
+    {
+      "name": "Silymarine"
+    },
+    {
+      "name": "Analgin"
+    },
+    {
+      "name": "Furazolidone"
+    },
+    {
+      "name": "Simvastatin"
+    },
+    {
+      "name": "Antipyrine"
+    },
+    {
+      "name": "Furosemide"
+    },
+    {
+      "name": "Sodium Bicarbonate"
+    },
+    {
+      "name": "Apramycin Sulphate"
+    },
+    {
+      "name": "Gabapentin"
+    },
+    {
+      "name": "Sodium Butyrate"
+    },
+    {
+      "name": "Aspartame"
+    },
+    {
+      "name": "Gemfibriozil"
+    },
+    {
+      "name": "Sodium Citrate"
+    },
+    {
+      "name": "Atrovastatin calcium"
+    },
+    {
+      "name": "Gentamycin Sulphate"
+    },
+    {
+      "name": "Sodium Fusidate"
+    },
+    {
+      "name": "Bacitracin Methylene Disalicylate (BMD)"
+    },
+    {
+      "name": "Ginkgo biloba extract"
+    },
+    {
+      "name": "Spiramycin Base/Adipate"
+    },
+    {
+      "name": "Benzoic acid"
+    },
+    {
+      "name": "Glycine"
+    },
+    {
+      "name": "Spirocolactone"
+    },
+    {
+      "name": "Betaine"
+    },
+    {
+      "name": "Griseofulvin"
+    },
+    {
+      "name": "Streptomycin Sulphate"
+    },
+    {
+      "name": "Betaine citrate"
+    },
+    {
+      "name": "Guaifenesin"
+    },
+    {
+      "name": "Sucralfate"
+    },
+    {
+      "name": "Betamethasone Base"
+    },
+    {
+      "name": "Ibersartan"
+    },
+    {
+      "name": "Sucralose"
+    },
+    {
+      "name": "BHT"
+    },
+    {
+      "name": "Ibuprofen"
+    },
+    {
+      "name": "Sulbutiamine"
+    },
+    {
+      "name": "Bromhexine HCL"
+    },
+    {
+      "name": "Iron Dextran"
+    },
+    {
+      "name": "Sulfacetamide Sodium"
+    },
+    {
+      "name": "Captopril"
+    },
+    {
+      "name": "Isotretinoin"
+    },
+    {
+      "name": "Sulfamethoxazole"
+    },
+    {
+      "name": "Carprofen"
+    },
+    {
+      "name": "Ketoprofen"
+    },
+    {
+      "name": "Tenofovir disoproxil fumarate"
+    },
+    {
+      "name": "Carvedilol"
+    },
+    {
+      "name": "Ketotifen Fumarate"
+    },
+    {
+      "name": "Terbinafine HCL"
+    },
+    {
+      "name": "Chloramphenicol"
+    },
+    {
+      "name": "Lamivudine"
+    },
+    {
+      "name": "Tetracycline HCL"
+    },
+    {
+      "name": "Chlortetracycline HCL"
+    },
+    {
+      "name": "Lanolin"
+    },
+    {
+      "name": "Tetramisole HCL"
+    },
+    {
+      "name": "Choline Chloride"
+    },
+    {
+      "name": "L-Carnitine Base/HCL/Fumarate"
+    },
+    {
+      "name": "Theophylline Anhydrous"
+    },
+    {
+      "name": "Chondriotin Sulphate"
+    },
+    {
+      "name": "Levamisole HCL"
+    },
+    {
+      "name": "Thiabendazole"
+    },
+    {
+      "name": "Cimetidine"
+    },
+    {
+      "name": "Lincomycin HCL"
+    },
+    {
+      "name": "Thiamphenicol"
+    },
+    {
+      "name": "Ciprofloxacin"
+    },
+    {
+      "name": "Lisinopril"
+    },
+    {
+      "name": "Tilmicosin Phosphate"
+    },
+    {
+      "name": "Citric Acid"
+    },
+    {
+      "name": "Losartan Potassium"
+    },
+    {
+      "name": "Toltrazuril"
+    },
+    {
+      "name": "Colistin Sulphate"
+    },
+    {
+      "name": "Mannitol"
+    },
+    {
+      "name": "Trimethoprim"
+    },
+    {
+      "name": "Dexamethasone Acetate"
+    },
+    {
+      "name": "Metformin HCl"
+    },
+    {
+      "name": "Tylosin"
+    },
+    {
+      "name": "D-Glucosamine HCL/2KCL/2NaCL"
+    },
+    {
+      "name": "Methyl Paraben Base/Sodium"
+    },
+    {
+      "name": "Ursodeoxycholic acid"
+    },
+    {
+      "name": "Diclazuril"
+    },
+    {
+      "name": "Methyl salicylate"
+    },
+    {
+      "name": "Dimenhydrinate"
+    },
+    {
+      "name": "Metronidazole"
+    },
+    {
+      "name": "Dimethyl sulfoxide"
+    },
+    {
+      "name": "Miconazole Nitrate"
+    }
+  ]
+}

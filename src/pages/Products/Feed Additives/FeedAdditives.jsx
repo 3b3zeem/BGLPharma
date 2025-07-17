@@ -27,8 +27,8 @@ const FeedAdditives = () => {
   return (
     <div className="w-full">
       <Meta
-        title="Food Additives"
-        description="Explore our range of food additives designed to enhance flavor, texture, and shelf life. Our products are compliant with food safety standards and are suitable for various applications in the food industry."
+        title="Feed Additives"
+        description="Explore our range of feed additives designed to enhance animal health and productivity. Our products are formulated to meet the nutritional needs of livestock and are compliant with industry standards."
       />
 
       <section className="relative h-[300px] overflow-hidden">
