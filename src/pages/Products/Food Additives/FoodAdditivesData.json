@@ -40,7 +40,7 @@
           "name": "Nicotinamide"
         },
         {
-          "name": "Chemical formula: C₆H₅NO₂"
+          "name": "Chemical Formula: C₆H₅NO₂"
         },
         {
           "name": "Grade: Feed, Food, Cosmetic"
@@ -107,7 +107,7 @@
       "name": "Vitamin E",
       "subtypes": [
         {
-          "name": "Chemical formula: C₃₁H₅₂O₃"
+          "name": "Chemical Formula: C₃₁H₅₂O₃"
         },
         {
           "name": "Grade: Food, Feed, Pharmaceutical"
@@ -118,7 +118,7 @@
       "name": "Vitamin C",
       "subtypes": [
         {
-          "name": "Chemical formula: C₆H₈O₆"
+          "name": "Chemical Formula: C₆H₈O₆"
         },
         {
           "name": "Grade: Feed, Food"
@@ -267,7 +267,7 @@
       "name": "Xanthan gum",
       "subtypes": [
         {
-          "name": "Chemical formula: C₃₅H₄₉O₂₉"
+          "name": "Chemical Formula: C₃₅H₄₉O₂₉"
         },
         {
           "name": "Grade: Industrial, Food"

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight, ChevronsRight, ChevronUp, House } from "lucide-react";
 import AOS from "aos";
 
-import FoodBanner from "../../../assets/Food-banner.jpg";
+import FoodBanner from "../../../assets/Products/Food-banner.jpg";
 
 const FoodAdditives = () => {
   useEffect(() => {
@@ -23,8 +23,6 @@ const FoodAdditives = () => {
       },
     }));
   };
-
-  const categoryOrder = ["Vitamins", "Amino Acids", "Pigments", "Others"];
 
   return (
     <div className="w-full">
@@ -65,7 +63,7 @@ const FoodAdditives = () => {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-25">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {Object.entries(FoodAdditivesData).map(([category, items]) => (
             <div key={category} className="mb-8 tracking-wider">
@@ -113,8 +111,7 @@ const FoodAdditives = () => {
                               subtype.name.startsWith("Chemical Formula:") ? (
                                 <span key={subIndex} className="block ml-2">
                                   {subtype.name
-                                    .replace(/(\d+)/g, "₍$1₎")
-                                    .replace("Chemical Formula:", "")}
+                                    }
                                 </span>
                               ) : (
                                 <span key={subIndex} className="block ml-2">

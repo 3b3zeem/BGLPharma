@@ -1,0 +1,283 @@
+{
+  "Vitamins": [
+    {
+      "name": "Vitamin A",
+      "subtypes": [
+        {
+          "name": "Vitamin A 1000 powder"
+        },
+        {
+          "name": "Chemical Formula: C₃₆H₆₀O₂"
+        },
+        {
+          "name": "Grade: Feed"
+        },
+        {
+          "name": "Vitamin A Powder CWS"
+        },
+        {
+          "name": "Vitamin A Acetate Oil"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B1 mono/HCl",
+      "subtypes": [
+        {
+          "name": "Vitamin B1 mono"
+        },
+        {
+          "name": "Chemical Formula: C₁₂H₁₇N₅O₄S"
+        },
+        {
+          "name": "Grade: Feed, Food, Pharmaceutical"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B2",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₁₇H₂₀N₄O₆"
+        },
+        {
+          "name": "Grade: Feed, Food, Pharmaceutical"
+        },
+        {
+          "name": "Vitamin B2 80%"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B3",
+      "subtypes": [
+        {
+          "name": "Vitamin B3 (Niacin)"
+        },
+        {
+          "name": "Vitamin B3 (Nicotinamide)"
+        },
+        {
+          "name": "Chemical Formula: C₆H₅NO₂"
+        },
+        {
+          "name": "Grade: Feed, Food, Cosmetic"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B5",
+      "subtypes": [
+        {
+          "name": "D-Calcium Pantothenate"
+        },
+        {
+          "name": "Chemical Formula: C₁₈H₃₂CaN₂O₁₀"
+        },
+        {
+          "name": "Grade: Feed, Food"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B9",
+      "subtypes": [
+        {
+          "name": "Folic Acid"
+        },
+        {
+          "name": "Chemical Formula: C₁₉H₁₉N₇O₆"
+        },
+        {
+          "name": "Grade: Feed, Food"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B12",
+      "subtypes": [
+        {
+          "name": "Mecobalamin"
+        },
+        {
+          "name": "Chemical Formula: C₆₃H₈₈CoN₁₄O₁₄P"
+        },
+        {
+          "name": "Grade: Food, Feed"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin D3",
+      "subtypes": [
+        {
+          "name": "Vitamin D3 500"
+        },
+        {
+          "name": "Vitamin D3 oil"
+        },
+        {
+          "name": "Chemical Formula: C₂₇H₄₄O"
+        },
+        {
+          "name": "Grade: Feed, Food, Pharmaceutical"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin E",
+      "subtypes": [
+        {
+          "name": "Vitamin E 50% powder"
+        },
+        {
+          "name": "Chemical Formula: C₃₁H₅₂O₃"
+        },
+        {
+          "name": "Grade: Food, Feed, Pharmaceutical"
+        },
+        {
+          "name": "Vitamin E 50% CWS"
+        },
+        {
+          "name": "Vitamin E oil"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin C",
+      "subtypes": [
+        {
+          "name": "Vitamin C (Ascorbic acid)"
+        },
+        {
+          "name": "Chemical Formula: C₆H₈O₆"
+        },
+        {
+          "name": "Grade: Feed, Food"
+        },
+        {
+          "name": "Vitamin C Phosphate 35%"
+        },
+        {
+          "name": "Vitamin C coated"
+        }
+      ]
+    },
+    {
+      "name": "Biotin",
+      "subtypes": [
+        {
+          "name": "Biotin Pure"
+        },
+        {
+          "name": "Biotin 2%"
+        },
+        {
+          "name": "Chemical Formula: C₁₀H₁₆N₂O₃S"
+        },
+        {
+          "name": "Grade: Feed, Food"
+        }
+      ]
+    },
+    {
+      "name": "Inositol"
+    },
+    {
+      "name": "Vitamin K1"
+    },
+    {
+      "name": "Vitamin K3 MSB/MNB"
+    }
+  ],
+  "Amino Acids": [
+    {
+      "name": "L-valine",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₅H₁₁NO₂"
+        },
+        {
+          "name": "Grade: Feed, Food"
+        }
+      ]
+    },
+    {
+      "name": "L-tryptophan",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₁₁H₁₂N₂O₂"
+        },
+        {
+          "name": "Grade: Feed, Food"
+        }
+      ]
+    },
+    {
+      "name": "L-isoleucine"
+    },
+    {
+      "name": "DL-methionine"
+    },
+    {
+      "name": "L-leucine"
+    },
+    {
+      "name": "L-lysine hydrochloride"
+    },
+    {
+      "name": "L-threonine"
+    }
+  ],
+  "Pigments": [
+    {
+      "name": "Astaxanthin"
+    },
+    {
+      "name": "Beta-Carotene"
+    },
+    {
+      "name": "Lutein"
+    },
+    {
+      "name": "Canthaxanthin"
+    },
+    {
+      "name": "Zeaxanthin"
+    },
+    {
+      "name": "Lycopene"
+    }
+  ],
+  "Acidifier": [
+    {
+      "name": "Fumaric acid",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₄H₄O₄"
+        },
+        {
+          "name": "Grade: Feed"
+        }
+      ]
+    },
+    {
+      "name": "Sodium Butyrate"
+    }
+  ],
+  "Others": [
+    {
+      "name": "Choline Chloride"
+    },
+    {
+      "name": "Betaine"
+    },
+    {
+      "name": "Selenomethionine"
+    },
+    {
+      "name": "Bile acid"
+    }
+  ]
+}
