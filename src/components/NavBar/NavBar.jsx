@@ -220,7 +220,7 @@ const NavBar = () => {
           {/* Products */}
           <div className="relative group">
             <span
-              className={`transition-colors duration-200 px-2 py-1 rounded-lg flex items-center ${
+              className={`transition-colors duration-200  py-1 rounded-lg flex items-center ${
                 isActiveParent
                   ? "bg-white bg-opacity-10 text-[#270195] shadow"
                   : "hover:text-[#270195] text-white"
