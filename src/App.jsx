@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 // import { LanguageProvider } from "./context/Language/LanguageContext";
 import PreventImageDragAndRightClick from "./utils/PreventImageDragAndRightClick";
 import "./utils/i18n";
+import "aos/dist/aos.css";
 
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";

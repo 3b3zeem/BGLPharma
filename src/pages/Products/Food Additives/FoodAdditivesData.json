@@ -1,0 +1,281 @@
+{
+  "Vitamins": [
+    {
+      "name": "Vitamin A",
+      "subtypes": [
+        {
+          "name": "Vitamin A Acetate"
+        },
+        {
+          "name": "Vitamin A Palmitate"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B1 mono/HCl",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₁₂H₁₇N₅O₄S"
+        },
+        {
+          "name": "Grade: Feed, Food, Pharmaceutical"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B2",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₁₇H₂₀N₄O₆"
+        },
+        {
+          "name": "Grade: Feed, Food, Pharmaceutical"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B3",
+      "subtypes": [
+        {
+          "name": "Nicotinamide"
+        },
+        {
+          "name": "Chemical formula: C₆H₅NO₂"
+        },
+        {
+          "name": "Grade: Feed, Food, Cosmetic"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B5",
+      "subtypes": [
+        {
+          "name": "D-calcium pantothenate/D-calpan"
+        },
+        {
+          "name": "D-panthenol"
+        },
+        {
+          "name": "Chemical Formula: C₁₈H₃₂CaN₂O₁₀"
+        },
+        {
+          "name": "Grade: Feed, Food"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B9",
+      "subtypes": [
+        {
+          "name": "Folic Acid"
+        },
+        {
+          "name": "Chemical Formula: C₁₉H₁₉N₇O₆"
+        },
+        {
+          "name": "Grade: Feed, Food"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B12",
+      "subtypes": [
+        {
+          "name": "Mecobalamin"
+        },
+        {
+          "name": "Chemical Formula: C₆₃H₈₈CoN₁₄O₁₄P"
+        },
+        {
+          "name": "Grade: Food, Feed"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin D3",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₂₇H₄₄O"
+        },
+        {
+          "name": "Grade: Feed, Food, Pharmaceutical"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin E",
+      "subtypes": [
+        {
+          "name": "Chemical formula: C₃₁H₅₂O₃"
+        },
+        {
+          "name": "Grade: Food, Feed, Pharmaceutical"
+        }
+      ]
+    },
+    {
+      "name": "Vitamin C",
+      "subtypes": [
+        {
+          "name": "Chemical formula: C₆H₈O₆"
+        },
+        {
+          "name": "Grade: Feed, Food"
+        }
+      ]
+    },
+    {
+      "name": "D-biotin",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₁₀H₁₆N₂O₃S"
+        },
+        {
+          "name": "Grade: Feed, Food"
+        }
+      ]
+    },
+    {
+      "name": "Inositol"
+    },
+    {
+      "name": "Vitamin K"
+    }
+  ],
+  "Amino Acids": [
+    {
+      "name": "L-valine",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₅H₁₁NO₂"
+        },
+        {
+          "name": "Grade: Feed, Food"
+        }
+      ]
+    },
+    {
+      "name": "L-tryptophan",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₁₁H₁₂N₂O₂"
+        },
+        {
+          "name": "Grade: Feed, Food"
+        }
+      ]
+    },
+    {
+      "name": "BCAA"
+    },
+    {
+      "name": "L-isoleucine"
+    },
+    {
+      "name": "L-glutamine"
+    },
+    {
+      "name": "L-methionine"
+    },
+    {
+      "name": "L-glutathione"
+    },
+    {
+      "name": "L-cystine"
+    },
+    {
+      "name": "L-arginine HCl"
+    },
+    {
+      "name": "Glycine"
+    },
+    {
+      "name": "L-alanine"
+    },
+    {
+      "name": "L-leucine"
+    },
+    {
+      "name": "L-lysine hydrochloride"
+    },
+    {
+      "name": "L-phenylalanine"
+    },
+    {
+      "name": "L-proline"
+    },
+    {
+      "name": "L-serine"
+    },
+    {
+      "name": "L-threonine"
+    },
+    {
+      "name": "L-carnitine"
+    }
+  ],
+  "Pigments": [
+    {
+      "name": "Astaxanthin"
+    },
+    {
+      "name": "Lutein"
+    },
+    {
+      "name": "β-Carotene"
+    },
+    {
+      "name": "Canthaxanthin"
+    }
+  ],
+  "Others": [
+    {
+      "name": "Creatine mono",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₄H₉N₃O₂"
+        },
+        {
+          "name": "Grade: Food"
+        }
+      ]
+    },
+    {
+      "name": "Lipoic acid",
+      "subtypes": [
+        {
+          "name": "Chemical Formula：C₄H₉N₃O₂"
+        },
+        {
+          "name": "Grade: Food"
+        }
+      ]
+    },
+    {
+      "name": "Choline chloride",
+      "subtypes": [
+        {
+          "name": "Chemical Formula: C₅H₁₄ClNO"
+        },
+        {
+          "name": "Grade: Food"
+        }
+      ]
+    },
+    {
+      "name": "Xanthan gum",
+      "subtypes": [
+        {
+          "name": "Chemical formula: C₃₅H₄₉O₂₉"
+        },
+        {
+          "name": "Grade: Industrial, Food"
+        }
+      ]
+    },
+    {
+      "name": "Ascorbyl Palmitate"
+    }
+  ]
+}
