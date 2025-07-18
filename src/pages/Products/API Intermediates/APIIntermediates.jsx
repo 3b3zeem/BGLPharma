@@ -67,11 +67,11 @@ const APIIntermediates = () => {
       <div className="container mx-auto px-4 py-25">
         <div className="w-full">
           <h3 className="text-4xl font-extrabold mb-6 text-[#270195]">
-            API and intermediates
+            API and intermediates:-
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="mb-8 tracking-wider">
-              <h4 className="text-2xl font-bold mb-4 text-[#3c5975]">
+              <h4 className="text-2xl font-extrabold mb-4 text-[#3c5975]">
                 Veterinary APIs:
               </h4>
               <ul className="space-y-5">
@@ -130,13 +130,13 @@ const APIIntermediates = () => {
             </div>
 
             <div className="mb-8 tracking-wider">
-              <h4 className="text-2xl font-bold mb-4 text-[#3c5975]">
+              <h4 className="text-2xl font-extrabold mb-4 text-[#3c5975]">
                 Human APIs:
               </h4>
               {Object.entries(APIIntermediatesData["Human APIs"]).map(
                 ([subcategory, items]) => (
                   <div key={subcategory} className="mb-6">
-                    <h5 className="text-xl font-semibold mb-3 text-[#3c5975]">
+                    <h5 className="text-xl font-semibold mb-3 text-[#3c5975] indent-1">
                       {subcategory}
                     </h5>
                     <ul className="space-y-5">
@@ -153,7 +153,7 @@ const APIIntermediates = () => {
                             }`}
                             onClick={() => toggleAccordion(subcategory, index)}
                           >
-                            <span className="mr-2">
+                            <span className="mx-2 ">
                               {item.description &&
                                 (expandedItems[subcategory]?.[index] ? (
                                   <ChevronUp />
@@ -200,7 +200,7 @@ const APIIntermediates = () => {
         <div className="grid grid-cols-1 gap-8 ">
           <div className="mb-8 tracking-wider">
             <h3 className="text-4xl font-extrabold mb-6 text-[#270195]">
-              Excipients
+              Excipients:
             </h3>
             <ul className="space-y-5">
               {APIIntermediatesData["Excipients"].map((item, index) => (
