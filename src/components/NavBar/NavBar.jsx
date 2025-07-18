@@ -15,12 +15,13 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 
 const NavBar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarProductOpen, setSidebarProductOpen] = useState(false);
   const location = useLocation();
   const isActiveParent =
     location.pathname.startsWith("/Food-Additives") ||
     location.pathname.startsWith("/Feed-Additives") ||
-    location.pathname.startsWith("/Chemicals") ||
-    location.pathname.startsWith("/Cosmetic-Ingredients") ||
+    // location.pathname.startsWith("/Chemicals") ||
+    // location.pathname.startsWith("/Cosmetic-Ingredients") ||
     location.pathname.startsWith("/API-Intermediates");
 
   return (
@@ -95,7 +96,7 @@ const NavBar = () => {
                   <Link
                     to="/Food-Additives"
                     className={`block px-4 py-2 transition-colors duration-200 ${
-                      location.pathname === "/Product1"
+                      location.pathname === "/Food-Additives"
                         ? "bg-[#e6f0fa] font-semibold"
                         : "hover:bg-[#e6f0fa]"
                     }`}
@@ -107,7 +108,7 @@ const NavBar = () => {
                   <Link
                     to="/Feed-Additives"
                     className={`block px-4 py-2 transition-colors duration-200 ${
-                      location.pathname === "/Product2"
+                      location.pathname === "/Feed-Additives"
                         ? "bg-[#e6f0fa] font-semibold"
                         : "hover:bg-[#e6f0fa]"
                     }`}
@@ -115,11 +116,11 @@ const NavBar = () => {
                     Feed Additives
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     to="/Chemicals"
                     className={`block px-4 py-2 transition-colors duration-200 ${
-                      location.pathname === "/Product2"
+                      location.pathname === "/Chemicals"
                         ? "bg-[#e6f0fa] font-semibold"
                         : "hover:bg-[#e6f0fa]"
                     }`}
@@ -131,19 +132,19 @@ const NavBar = () => {
                   <Link
                     to="/Cosmetic-Ingredients"
                     className={`block px-4 py-2 transition-colors duration-200 ${
-                      location.pathname === "/Product2"
+                      location.pathname === "/Cosmetic-Ingredients"
                         ? "bg-[#e6f0fa] font-semibold"
                         : "hover:bg-[#e6f0fa]"
                     }`}
                   >
                     Cosmetic-Ingredients
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     to="/API-Intermediates"
                     className={`block px-4 py-2 transition-colors duration-200 ${
-                      location.pathname === "/Product2"
+                      location.pathname === "/API-Intermediates"
                         ? "bg-[#e6f0fa] font-semibold"
                         : "hover:bg-[#e6f0fa]"
                     }`}
@@ -194,10 +195,7 @@ const NavBar = () => {
             />
           </button>
         </div>
-        {/* <button className="block w-[90%] mx-auto mb-4 bg-[#4f46e5] text-white py-2 rounded font-bold flex items-center justify-center gap-2">
-          Login <span className="ml-2">→</span>
-        </button> */}
-        <ul className="flex flex-col gap-2 px-6 mt-10">
+        <nav className="flex flex-col gap-2 px-6 mt-10">
           <Link
             to={"/"}
             onClick={() => setSidebarOpen(false)}
@@ -220,25 +218,39 @@ const NavBar = () => {
             About
           </Link>
           {/* Products */}
-          <div className="relative group">
+          <div className="relative">
             <span
-              className={`transition-colors duration-200  py-1 rounded-lg flex items-center ${
+              onClick={() => setSidebarProductOpen((open) => !open)}
+              className={`transition-colors duration-200 py-1 rounded-lg flex items-center cursor-pointer ${
                 isActiveParent
-                  ? "bg-white bg-opacity-10 text-[#270195] shadow"
-                  : "hover:text-[#270195] text-white"
+                  ? "bg-white bg-opacity-10 text-[#270195] px-2"
+                  : "hover:text-[#270195] text-white "
               }`}
             >
               PRODUCT <ChevronDown size={16} className="ml-1" />
             </span>
 
-            <div className="pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 opacity-0 transition-opacity duration-300 absolute -left-5 top-full z-[100]">
+            <div
+              className={`absolute -left-5 top-full z-[100] overflow-hidden transition-all duration-300 ease-in-out ${
+                sidebarProductOpen
+                  ? "pointer-events-auto"
+                  : "pointer-events-none"
+              }`}
+              style={{
+                maxHeight: sidebarProductOpen ? "1000px" : "0",
+                opacity: sidebarProductOpen ? 1 : 0,
+              }}
+            >
               <ul className="bg-white text-[#270195] rounded shadow-lg mt-2 min-w-[200px]">
                 <li>
                   <Link
                     to="/Food-Additives"
-                    onClick={() => setSidebarOpen(false)}
+                    onClick={() => {
+                      setSidebarOpen(false);
+                      setSidebarProductOpen(false);
+                    }}
                     className={`block px-4 py-2 transition-colors duration-200 ${
-                      location.pathname === "/Product1"
+                      location.pathname === "/Food-Additives"
                         ? "bg-[#e6f0fa] font-semibold"
                         : "hover:bg-[#e6f0fa]"
                     }`}
@@ -249,9 +261,12 @@ const NavBar = () => {
                 <li>
                   <Link
                     to="/Feed-Additives"
-                    onClick={() => setSidebarOpen(false)}
+                    onClick={() => {
+                      setSidebarOpen(false);
+                      setSidebarProductOpen(false);
+                    }}
                     className={`block px-4 py-2 transition-colors duration-200 ${
-                      location.pathname === "/Product2"
+                      location.pathname === "/Feed-Additives"
                         ? "bg-[#e6f0fa] font-semibold"
                         : "hover:bg-[#e6f0fa]"
                     }`}
@@ -259,12 +274,15 @@ const NavBar = () => {
                     Feed Additives
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     to="/Chemicals"
-                    onClick={() => setSidebarOpen(false)}
+                    onClick={() => {
+                      setSidebarOpen(false);
+                      setSidebarProductOpen(false);
+                    }}
                     className={`block px-4 py-2 transition-colors duration-200 ${
-                      location.pathname === "/Product2"
+                      location.pathname === "/Chemicals"
                         ? "bg-[#e6f0fa] font-semibold"
                         : "hover:bg-[#e6f0fa]"
                     }`}
@@ -275,22 +293,28 @@ const NavBar = () => {
                 <li>
                   <Link
                     to="/Cosmetic-Ingredients"
-                    onClick={() => setSidebarOpen(false)}
+                    onClick={() => {
+                      setSidebarOpen(false);
+                      setSidebarProductOpen(false);
+                    }}
                     className={`block px-4 py-2 transition-colors duration-200 ${
-                      location.pathname === "/Product2"
+                      location.pathname === "/Cosmetic-Ingredients"
                         ? "bg-[#e6f0fa] font-semibold"
                         : "hover:bg-[#e6f0fa]"
                     }`}
                   >
                     Cosmetic-Ingredients
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     to="/API-Intermediates"
-                    onClick={() => setSidebarOpen(false)}
+                    onClick={() => {
+                      setSidebarOpen(false);
+                      setSidebarProductOpen(false);
+                    }}
                     className={`block px-4 py-2 transition-colors duration-200 ${
-                      location.pathname === "/Product2"
+                      location.pathname === "/API-Intermediates"
                         ? "bg-[#e6f0fa] font-semibold"
                         : "hover:bg-[#e6f0fa]"
                     }`}
@@ -301,7 +325,7 @@ const NavBar = () => {
               </ul>
             </div>
           </div>
-        </ul>
+        </nav>
 
         <div className="px-6 text-sm mt-30">
           <div className="flex items-center gap-2 mb-1">
@@ -347,7 +371,10 @@ const NavBar = () => {
       {sidebarOpen && (
         <div
           className="fixed inset-0 bg-black/40 z-[150] cursor-pointer"
-          onClick={() => setSidebarOpen(false)}
+          onClick={() => {
+            setSidebarOpen(false);
+            setSidebarProductOpen(false);
+          }}
         ></div>
       )}
     </React.Fragment>
