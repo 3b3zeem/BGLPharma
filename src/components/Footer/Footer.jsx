@@ -149,7 +149,7 @@ const Footer = () => {
                       to="/Food-Additives"
                       onClick={() => setSidebarOpen(false)}
                       className={`block px-4 py-2 transition-colors duration-200 ${
-                        location.pathname === "/Product1"
+                        location.pathname === "/Food-Additives"
                           ? "bg-[#e6f0fa] font-semibold"
                           : "hover:bg-[#e6f0fa]"
                       }`}
@@ -162,7 +162,7 @@ const Footer = () => {
                       to="/Feed-Additives"
                       onClick={() => setSidebarOpen(false)}
                       className={`block px-4 py-2 transition-colors duration-200 ${
-                        location.pathname === "/Product2"
+                        location.pathname === "/Feed-Additives"
                           ? "bg-[#e6f0fa] font-semibold"
                           : "hover:bg-[#e6f0fa]"
                       }`}
@@ -172,36 +172,10 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      to="/Chemicals"
-                      onClick={() => setSidebarOpen(false)}
-                      className={`block px-4 py-2 transition-colors duration-200 ${
-                        location.pathname === "/Product2"
-                          ? "bg-[#e6f0fa] font-semibold"
-                          : "hover:bg-[#e6f0fa]"
-                      }`}
-                    >
-                      Chemicals
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/Cosmetic-Ingredients"
-                      onClick={() => setSidebarOpen(false)}
-                      className={`block px-4 py-2 transition-colors duration-200 ${
-                        location.pathname === "/Product2"
-                          ? "bg-[#e6f0fa] font-semibold"
-                          : "hover:bg-[#e6f0fa]"
-                      }`}
-                    >
-                      Cosmetic-Ingredients
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
                       to="/API-Intermediates"
                       onClick={() => setSidebarOpen(false)}
                       className={`block px-4 py-2 transition-colors duration-200 ${
-                        location.pathname === "/Product2"
+                        location.pathname === "/API-Intermediates"
                           ? "bg-[#e6f0fa] font-semibold"
                           : "hover:bg-[#e6f0fa]"
                       }`}
