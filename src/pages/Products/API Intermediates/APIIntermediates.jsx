@@ -10,7 +10,6 @@ import APIBanner from "../../../assets/Products/API.jpg";
 const APIIntermediates = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
-
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
 
@@ -26,12 +25,6 @@ const APIIntermediates = () => {
     }));
   };
 
-  const otherAPIItems = APIIntermediatesData["Other API and intermediates"];
-  const columnSize = Math.ceil(otherAPIItems.length / 3);
-  const column1 = otherAPIItems.slice(0, columnSize);
-  const column2 = otherAPIItems.slice(columnSize, columnSize * 2);
-  const column3 = otherAPIItems.slice(columnSize * 2);
-
   return (
     <div className="w-full">
       <Meta
@@ -45,8 +38,8 @@ const APIIntermediates = () => {
           style={{ backgroundImage: `url(${APIBanner})` }}
         ></div>
 
-        <div className="relative bg-gradient-to-r from-[#1a237e]/50 to-[#2266b0]/50 flex items-start justify-start h-full px-4 ">
-          <div className=" p-8 rounded-lg text-white">
+        <div className="relative bg-gradient-to-r from-[#1a237e]/50 to-[#2266b0]/50 flex items-start justify-start h-full px-4">
+          <div className="p-8 rounded-lg text-white">
             <h2
               className="text-5xl md:text-6xl font-bold mb-4"
               data-aos="fade-right"
@@ -72,232 +65,50 @@ const APIIntermediates = () => {
       </section>
 
       <div className="container mx-auto px-4 py-25">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {Object.entries(APIIntermediatesData).map(([category, items]) =>
-            category !== "Other API and intermediates" ? (
-              <div key={category} className="mb-8 tracking-wider">
-                <h3 className="text-4xl font-extrabold mb-6 text-[#270195]">
-                  {category}
-                </h3>
-                <ul className="space-y-5">
-                  {items.map((item, index) => (
-                    <li key={index} className="text-[#3c5975] border-b pb-2">
-                      <div
-                        className={`flex items-center cursor-pointer hover:text-[#270195] hover:font-bold ${
-                          expandedItems[category]?.[index]
-                            ? "text-[#270195] font-bold"
-                            : ""
-                        }`}
-                        onClick={() => toggleAccordion(category, index)}
-                      >
-                        <span className="mr-2">
-                          {item.subtypes &&
-                            item.subtypes.length > 0 &&
-                            (expandedItems[category]?.[index] ? (
-                              <ChevronUp />
-                            ) : (
-                              <ChevronRight />
-                            ))}
-                        </span>
-                        {item.name && <span>{item.name}</span>}
-                      </div>
-                      {item.subtypes && (
-                        <div
-                          className="ml-6 mt-2 overflow-hidden transition-all duration-300 ease-in-out"
-                          style={{
-                            maxHeight: expandedItems[category]?.[index]
-                              ? "1000px"
-                              : "0",
-                            opacity: expandedItems[category]?.[index] ? 1 : 0,
-                            pointerEvents: expandedItems[category]?.[index]
-                              ? "auto"
-                              : "none",
-                          }}
-                        >
-                          <div className="space-y-1">
-                            {item.subtypes.map((subtype, subIndex) =>
-                              subtype.name ? (
-                                <span key={subIndex} className="block ml-2">
-                                  {subtype.name}
-                                </span>
-                              ) : null
-                            )}
-                          </div>
-                        </div>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null
-          )}
-        </div>
-
-        {otherAPIItems && (
-          <div className="w-full mt-16">
-            <h3 className="text-4xl font-extrabold mb-6 text-[#270195]">
-              Other API and intermediates
-            </h3>
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="w-full">
+          <h3 className="text-4xl font-extrabold mb-6 text-[#270195]">
+            API and intermediates
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="mb-8 tracking-wider">
+              <h4 className="text-2xl font-bold mb-4 text-[#3c5975]">
+                Veterinary APIs:
+              </h4>
               <ul className="space-y-5">
-                {column1.map((item, index) => (
+                {APIIntermediatesData["Veterinary APIs"].map((item, index) => (
                   <li key={index} className="text-[#3c5975] border-b pb-2">
                     <div
-                      className={`flex items-center cursor-pointer hover:text-[#270195] hover:font-bold`}
-                      onClick={() =>
-                        toggleAccordion("Other API and intermediates", index)
-                      }
+                      className={`flex items-center cursor-pointer hover:text-[#270195] hover:font-bold ${
+                        expandedItems["Veterinary APIs"]?.[index]
+                          ? "text-[#270195] font-bold"
+                          : ""
+                      }`}
+                      onClick={() => toggleAccordion("Veterinary APIs", index)}
                     >
                       <span className="mr-2">
                         {item.subtypes &&
                           item.subtypes.length > 0 &&
-                          (expandedItems["Other API and intermediates"]?.[
+                          (expandedItems["Veterinary APIs"]?.[index] ? (
+                            <ChevronUp />
+                          ) : (
+                            <ChevronRight />
+                          ))}
+                      </span>
+                      {item.name && <span>{item.name}</span>}
+                    </div>
+                    {item.subtypes && (
+                      <div
+                        className="ml-6 mt-2 overflow-hidden transition-all duration-300 ease-in-out"
+                        style={{
+                          maxHeight: expandedItems["Veterinary APIs"]?.[index]
+                            ? "1000px"
+                            : "0",
+                          opacity: expandedItems["Veterinary APIs"]?.[index]
+                            ? 1
+                            : 0,
+                          pointerEvents: expandedItems["Veterinary APIs"]?.[
                             index
-                          ] ? (
-                            <ChevronUp />
-                          ) : (
-                            <ChevronRight />
-                          ))}
-                      </span>
-                      {item.name && <span>{item.name}</span>}
-                    </div>
-                    {item.subtypes && (
-                      <div
-                        className="ml-6 mt-2 overflow-hidden transition-all duration-300 ease-in-out"
-                        style={{
-                          maxHeight: expandedItems[
-                            "Other API and intermediates"
-                          ]?.[index]
-                            ? "1000px"
-                            : "0",
-                          opacity: expandedItems[
-                            "Other API and intermediates"
-                          ]?.[index]
-                            ? 1
-                            : 0,
-                          pointerEvents: expandedItems[
-                            "Other API and intermediates"
-                          ]?.[index]
-                            ? "auto"
-                            : "none",
-                        }}
-                      >
-                        <div className="space-y-1">
-                          {item.subtypes.map((subtype, subIndex) =>
-                            subtype.name ? (
-                              <span key={subIndex} className="block ml-2">
-                                {subtype.name}
-                              </span>
-                            ) : null
-                          )}
-                        </div>
-                      </div>
-                    )}
-                  </li>
-                ))}
-              </ul>
-              <ul className="space-y-5">
-                {column2.map((item, index) => (
-                  <li key={index} className="text-[#3c5975] border-b pb-2">
-                    <div
-                      className={`flex items-center cursor-pointer hover:text-[#270195] hover:font-bold`}
-                      onClick={() =>
-                        toggleAccordion(
-                          "Other API and intermediates",
-                          index + columnSize
-                        )
-                      }
-                    >
-                      <span className="mr-2">
-                        {item.subtypes &&
-                          item.subtypes.length > 0 &&
-                          (expandedItems["Other API and intermediates"]?.[
-                            index + columnSize
-                          ] ? (
-                            <ChevronUp />
-                          ) : (
-                            <ChevronRight />
-                          ))}
-                      </span>
-                      {item.name && <span>{item.name}</span>}
-                    </div>
-                    {item.subtypes && (
-                      <div
-                        className="ml-6 mt-2 overflow-hidden transition-all duration-300 ease-in-out"
-                        style={{
-                          maxHeight: expandedItems[
-                            "Other API and intermediates"
-                          ]?.[index + columnSize]
-                            ? "1000px"
-                            : "0",
-                          opacity: expandedItems[
-                            "Other API and intermediates"
-                          ]?.[index + columnSize]
-                            ? 1
-                            : 0,
-                          pointerEvents: expandedItems[
-                            "Other API and intermediates"
-                          ]?.[index + columnSize]
-                            ? "auto"
-                            : "none",
-                        }}
-                      >
-                        <div className="space-y-1">
-                          {item.subtypes.map((subtype, subIndex) =>
-                            subtype.name ? (
-                              <span key={subIndex} className="block ml-2">
-                                {subtype.name}
-                              </span>
-                            ) : null
-                          )}
-                        </div>
-                      </div>
-                    )}
-                  </li>
-                ))}
-              </ul>
-              <ul className="space-y-5">
-                {column3.map((item, index) => (
-                  <li key={index} className="text-[#3c5975] border-b pb-2">
-                    <div
-                      className={`flex items-center cursor-pointer hover:text-[#270195] hover:font-bold`}
-                      onClick={() =>
-                        toggleAccordion(
-                          "Other API and intermediates",
-                          index + columnSize * 2
-                        )
-                      }
-                    >
-                      <span className="mr-2">
-                        {item.subtypes &&
-                          item.subtypes.length > 0 &&
-                          (expandedItems["Other API and intermediates"]?.[
-                            index + columnSize * 2
-                          ] ? (
-                            <ChevronUp />
-                          ) : (
-                            <ChevronRight />
-                          ))}
-                      </span>
-                      {item.name && <span>{item.name}</span>}
-                    </div>
-                    {item.subtypes && (
-                      <div
-                        className="ml-6 mt-2 overflow-hidden transition-all duration-300 ease-in-out"
-                        style={{
-                          maxHeight: expandedItems[
-                            "Other API and intermediates"
-                          ]?.[index + columnSize * 2]
-                            ? "1000px"
-                            : "0",
-                          opacity: expandedItems[
-                            "Other API and intermediates"
-                          ]?.[index + columnSize * 2]
-                            ? 1
-                            : 0,
-                          pointerEvents: expandedItems[
-                            "Other API and intermediates"
-                          ]?.[index + columnSize * 2]
+                          ]
                             ? "auto"
                             : "none",
                         }}
@@ -317,8 +128,131 @@ const APIIntermediates = () => {
                 ))}
               </ul>
             </div>
+
+            <div className="mb-8 tracking-wider">
+              <h4 className="text-2xl font-bold mb-4 text-[#3c5975]">
+                Human APIs:
+              </h4>
+              {Object.entries(APIIntermediatesData["Human APIs"]).map(
+                ([subcategory, items]) => (
+                  <div key={subcategory} className="mb-6">
+                    <h5 className="text-xl font-semibold mb-3 text-[#3c5975]">
+                      {subcategory}
+                    </h5>
+                    <ul className="space-y-5">
+                      {items.map((item, index) => (
+                        <li
+                          key={index}
+                          className="text-[#3c5975] border-b pb-2"
+                        >
+                          <div
+                            className={`flex items-center cursor-pointer hover:text-[#270195] hover:font-bold ${
+                              expandedItems[subcategory]?.[index]
+                                ? "text-[#270195] font-bold"
+                                : ""
+                            }`}
+                            onClick={() => toggleAccordion(subcategory, index)}
+                          >
+                            <span className="mr-2">
+                              {item.description &&
+                                (expandedItems[subcategory]?.[index] ? (
+                                  <ChevronUp />
+                                ) : (
+                                  <ChevronRight />
+                                ))}
+                            </span>
+                            {item.name && <span>{item.name}</span>}
+                          </div>
+                          {item.description && (
+                            <div
+                              className="ml-6 mt-2 overflow-hidden transition-all duration-300 ease-in-out"
+                              style={{
+                                maxHeight: expandedItems[subcategory]?.[index]
+                                  ? "1000px"
+                                  : "0",
+                                opacity: expandedItems[subcategory]?.[index]
+                                  ? 1
+                                  : 0,
+                                pointerEvents: expandedItems[subcategory]?.[
+                                  index
+                                ]
+                                  ? "auto"
+                                  : "none",
+                              }}
+                            >
+                              <div className="space-y-1">
+                                <span className="block ml-2">
+                                  {item.description}
+                                </span>
+                              </div>
+                            </div>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )
+              )}
+            </div>
           </div>
-        )}
+        </div>
+
+        <div className="grid grid-cols-1 gap-8 ">
+          <div className="mb-8 tracking-wider">
+            <h3 className="text-4xl font-extrabold mb-6 text-[#270195]">
+              Excipients
+            </h3>
+            <ul className="space-y-5">
+              {APIIntermediatesData["Excipients"].map((item, index) => (
+                <li key={index} className="text-[#3c5975] border-b pb-2">
+                  <div
+                    className={`flex items-center cursor-pointer hover:text-[#270195] hover:font-bold ${
+                      expandedItems["Excipients"]?.[index]
+                        ? "text-[#270195] font-bold"
+                        : ""
+                    }`}
+                    onClick={() => toggleAccordion("Excipients", index)}
+                  >
+                    <span className="mr-2">
+                      {item.subtypes &&
+                        item.subtypes.length > 0 &&
+                        (expandedItems["Excipients"]?.[index] ? (
+                          <ChevronUp />
+                        ) : (
+                          <ChevronRight />
+                        ))}
+                    </span>
+                    {item.name && <span>{item.name}</span>}
+                  </div>
+                  {/* {item.subtypes && (
+                    <div
+                      className="ml-6 mt-2 overflow-hidden transition-all duration-300 ease-in-out"
+                      style={{
+                        maxHeight: expandedItems["Excipients"]?.[index]
+                          ? "1000px"
+                          : "0",
+                        opacity: expandedItems["Excipients"]?.[index] ? 1 : 0,
+                        pointerEvents: expandedItems["Excipients"]?.[index]
+                          ? "auto"
+                          : "none",
+                      }}
+                    >
+                      <div className="space-y-1">
+                        {item.subtypes.map((subtype, subIndex) =>
+                          subtype.name ? (
+                            <span key={subIndex} className="block ml-2">
+                              {subtype.name}
+                            </span>
+                          ) : null
+                        )}
+                      </div>
+                    </div>
+                  )} */}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );

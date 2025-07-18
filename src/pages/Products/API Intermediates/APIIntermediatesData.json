@@ -1,461 +1,485 @@
 {
-  "Vitamins": [
-    {
-      "name": "Vitamin B1",
-      "subtypes": [
-        {
-          "name": "Chemical Formula: C₁₂H₁₇N₅O₄S"
-        },
-        {
-          "name": "Grade: Feed, Food, Pharmaceutical"
-        }
-      ]
-    },
-    {
-      "name": "Vitamin B2",
-      "subtypes": [
-        {
-          "name": "Chemical Formula: C₁₇H₂₀N₄O₆"
-        },
-        {
-          "name": "Grade: Feed, Food, Pharmaceutical"
-        }
-      ]
-    },
-    {
-      "name": "Vitamin B12",
-      "subtypes": [
-        {
-          "name": "Chemical Formula: C₆₃H₈₈CoN₁₄O₁₄P"
-        },
-        {
-          "name": "Grade: Food, Feed, Pharmaceutical"
-        }
-      ]
-    },
-    {
-      "name": "Vitamin D3",
-      "subtypes": [
-        {
-          "name": "Chemical Formula: C₂₇H₄₄O"
-        },
-        {
-          "name": "Grade: Feed, Food, Pharmaceutical"
-        }
-      ]
-    },
-    {
-      "name": "Vitamin E",
-      "subtypes": [
-        {
-          "name": "Chemical Formula: C₃₁H₅₂O₃"
-        },
-        {
-          "name": "Grade: Food, Feed, Pharmaceutical"
-        }
-      ]
-    },
-    {
-      "name": "Vitamin B6"
-    }
-  ],
   "Excipients": [
     {
-      "name": "PVP K30",
-      "subtypes": [
-        {
-          "name": "Chemical Formula: (C₆H₉NO)ₙ"
-        },
-        {
-          "name": "Grade: Pharmaceutical"
-        }
-      ]
+      "name": "Aluminium Hydroxide Gel & Paste"
     },
     {
-      "name": "Povidone Iodine"
+      "name": "Aluminum Monostearate"
     },
     {
-      "name": "Cyclodextrin"
+      "name": "Aluminum Silicate"
+    },
+    {
+      "name": "Aluminum Stearate"
+    },
+    {
+      "name": "AAttapulgite"
+    },
+    {
+      "name": "Barium Sulphate"
+    },
+    {
+      "name": "Bentonite"
+    },
+    {
+      "name": "Calcium Carbonate (Light & Heavy)"
+    },
+    {
+      "name": "Calcium Hydroxide (Hydrated Lime)"
+    },
+    {
+      "name": "Calcium Stearate"
+    },
+    {
+      "name": "Calcium Sulphate Anhydrous"
+    },
+    {
+      "name": "Calcium Sulphate Dihydrate"
+    },
+    {
+      "name": "Fuller's Earth"
+    },
+    {
+      "name": "Hydrated Calcium Silicate"
+    },
+    {
+      "name": "HPMC (Hydroxypropyl Methylcellulose)"
+    },
+    {
+      "name": "Kaolin"
+    },
+    {
+      "name": "Magnesium Aluminium Silicate"
     },
     {
       "name": "Magnesium Stearate"
+    },
+    {
+      "name": "Magnesium Trisilicate"
+    },
+    {
+      "name": "Potassium Iodide"
+    },
+    {
+      "name": "Purified Siliceous Earth"
+    },
+    {
+      "name": "Simethicone Emulsion 30%"
+    },
+    {
+      "name": "Sodium Stearate"
+    },
+    {
+      "name": "Starch (Maize, Corn)"
+    },
+    {
+      "name": "Stearic Acid"
+    },
+    {
+      "name": "Sucrose"
+    },
+    {
+      "name": "Talc"
+    },
+    {
+      "name": "Zinc Carbonate"
+    },
+    {
+      "name": "Zinc Oxide"
+    },
+    {
+      "name": "Zinc Stearate"
+    },
+    {
+      "name": "Zinc Sulphate Monohydrate"
     }
   ],
-  "Other API and intermediates": [
-    {
-      "name": "Fusidic acid"
-    },
-    {
-      "name": "Dimetridazole"
-    },
-    {
-      "name": "Milk Thistle extract"
-    },
-    {
-      "name": "Acarbose"
-    },
-    {
-      "name": "Diosmin"
-    },
-    {
-      "name": "N-Acetyl D-Glucosamine"
-    },
-    {
-      "name": "Aceclofenac"
-    },
-    {
-      "name": "Diphenhydramine HCL"
-    },
-    {
-      "name": "N-acetyl L-cysteine"
-    },
-    {
-      "name": "Acetylsalicylic Acid"
-    },
-    {
-      "name": "Doxycycline HCL"
-    },
-    {
-      "name": "N-Acetyl-DL-Methionine"
-    },
-    {
-      "name": "Aciclovir"
-    },
-    {
-      "name": "Enalapril Maleate"
-    },
-    {
-      "name": "Naproxen base/Sodium"
-    },
-    {
-      "name": "Adefovir dipivoxil"
-    },
-    {
-      "name": "Enramycin"
-    },
-    {
-      "name": "Neomycin sulphate"
-    },
+  "Veterinary APIs": [
     {
       "name": "Albendazole"
     },
     {
-      "name": "Enrofloxacin"
+      "name": "Chlortetracycline"
     },
     {
-      "name": "Paracetamol"
+      "name": "Clopidole"
     },
     {
-      "name": "Allopurinol"
+      "name": "Difloxacin"
     },
     {
-      "name": "Enrofloxacin Base/HCL"
-    },
-    {
-      "name": "Penicillin V Potassium"
-    },
-    {
-      "name": "Alpha licpic acid"
-    },
-    {
-      "name": "Erythromycin"
-    },
-    {
-      "name": "Piracetam"
-    },
-    {
-      "name": "Ambroxol HCL"
-    },
-    {
-      "name": "Fenbendazole"
-    },
-    {
-      "name": "Policresulen"
-    },
-    {
-      "name": "Amikacin Sulphate"
-    },
-    {
-      "name": "Ferrous Gluconate"
-    },
-    {
-      "name": "Povidone Iodine"
-    },
-    {
-      "name": "Amisulpride"
+      "name": "Doxycycline"
     },
     {
       "name": "Florfenicol"
     },
     {
-      "name": "Prednisone"
+      "name": "Ivermectin"
     },
     {
-      "name": "Amoxycillin Trihydrate"
+      "name": "Levamisole"
     },
     {
-      "name": "Pregabalin"
+      "name": "Lincomycin Hydrochloride"
     },
     {
-      "name": "Ampicillin Trihydrate"
+      "name": "Neomycin Sulphate"
     },
     {
-      "name": "Flubendazole"
+      "name": "Oxytetracycline Dihydrate"
     },
     {
-      "name": "Secnidazole"
-    },
-    {
-      "name": "Amprolium HCL"
-    },
-    {
-      "name": "Fluconazole"
-    },
-    {
-      "name": "Silymarine"
-    },
-    {
-      "name": "Analgin"
-    },
-    {
-      "name": "Furazolidone"
-    },
-    {
-      "name": "Simvastatin"
-    },
-    {
-      "name": "Antipyrine"
-    },
-    {
-      "name": "Furosemide"
-    },
-    {
-      "name": "Sodium Bicarbonate"
-    },
-    {
-      "name": "Apramycin Sulphate"
-    },
-    {
-      "name": "Gabapentin"
-    },
-    {
-      "name": "Sodium Butyrate"
-    },
-    {
-      "name": "Aspartame"
-    },
-    {
-      "name": "Gemfibriozil"
-    },
-    {
-      "name": "Sodium Citrate"
-    },
-    {
-      "name": "Atrovastatin calcium"
-    },
-    {
-      "name": "Gentamycin Sulphate"
-    },
-    {
-      "name": "Sodium Fusidate"
-    },
-    {
-      "name": "Bacitracin Methylene Disalicylate (BMD)"
-    },
-    {
-      "name": "Ginkgo biloba extract"
-    },
-    {
-      "name": "Spiramycin Base/Adipate"
-    },
-    {
-      "name": "Benzoic acid"
-    },
-    {
-      "name": "Glycine"
-    },
-    {
-      "name": "Spirocolactone"
-    },
-    {
-      "name": "Betaine"
-    },
-    {
-      "name": "Griseofulvin"
+      "name": "Rafoxanide"
     },
     {
       "name": "Streptomycin Sulphate"
     },
     {
-      "name": "Betaine citrate"
+      "name": "Sulfaclozin Sodium"
     },
     {
-      "name": "Guaifenesin"
-    },
-    {
-      "name": "Sucralfate"
-    },
-    {
-      "name": "Betamethasone Base"
-    },
-    {
-      "name": "Ibersartan"
-    },
-    {
-      "name": "Sucralose"
-    },
-    {
-      "name": "BHT"
-    },
-    {
-      "name": "Ibuprofen"
-    },
-    {
-      "name": "Sulbutiamine"
-    },
-    {
-      "name": "Bromhexine HCL"
-    },
-    {
-      "name": "Iron Dextran"
-    },
-    {
-      "name": "Sulfacetamide Sodium"
-    },
-    {
-      "name": "Captopril"
-    },
-    {
-      "name": "Isotretinoin"
-    },
-    {
-      "name": "Sulfamethoxazole"
-    },
-    {
-      "name": "Carprofen"
-    },
-    {
-      "name": "Ketoprofen"
-    },
-    {
-      "name": "Tenofovir disoproxil fumarate"
-    },
-    {
-      "name": "Carvedilol"
-    },
-    {
-      "name": "Ketotifen Fumarate"
-    },
-    {
-      "name": "Terbinafine HCL"
-    },
-    {
-      "name": "Chloramphenicol"
-    },
-    {
-      "name": "Lamivudine"
-    },
-    {
-      "name": "Tetracycline HCL"
-    },
-    {
-      "name": "Chlortetracycline HCL"
-    },
-    {
-      "name": "Lanolin"
-    },
-    {
-      "name": "Tetramisole HCL"
-    },
-    {
-      "name": "Choline Chloride"
-    },
-    {
-      "name": "L-Carnitine Base/HCL/Fumarate"
-    },
-    {
-      "name": "Theophylline Anhydrous"
-    },
-    {
-      "name": "Chondriotin Sulphate"
-    },
-    {
-      "name": "Levamisole HCL"
-    },
-    {
-      "name": "Thiabendazole"
-    },
-    {
-      "name": "Cimetidine"
-    },
-    {
-      "name": "Lincomycin HCL"
+      "name": "Sulfadimethoxine Sodium"
     },
     {
       "name": "Thiamphenicol"
     },
     {
-      "name": "Ciprofloxacin"
-    },
-    {
-      "name": "Lisinopril"
-    },
-    {
-      "name": "Tilmicosin Phosphate"
-    },
-    {
-      "name": "Citric Acid"
-    },
-    {
-      "name": "Losartan Potassium"
-    },
-    {
       "name": "Toltrazuril"
     },
     {
-      "name": "Colistin Sulphate"
+      "name": "Closantel"
     },
     {
-      "name": "Mannitol"
+      "name": "Nitroxynil"
     },
     {
-      "name": "Trimethoprim"
+      "name": "Triclabendazole"
     },
     {
-      "name": "Dexamethasone Acetate"
+      "name": "Oxyclozanide"
     },
     {
-      "name": "Metformin HCl"
-    },
-    {
-      "name": "Tylosin"
-    },
-    {
-      "name": "D-Glucosamine HCL/2KCL/2NaCL"
-    },
-    {
-      "name": "Methyl Paraben Base/Sodium"
-    },
-    {
-      "name": "Ursodeoxycholic acid"
-    },
-    {
-      "name": "Diclazuril"
-    },
-    {
-      "name": "Methyl salicylate"
-    },
-    {
-      "name": "Dimenhydrinate"
-    },
-    {
-      "name": "Metronidazole"
-    },
-    {
-      "name": "Dimethyl sulfoxide"
-    },
-    {
-      "name": "Miconazole Nitrate"
+      "name": "Fenbendazole"
     }
-  ]
+  ],
+  "Human APIs": {
+    "Central Nervous System (CNS) & Neurology": [
+      {
+        "name": "Gabapentin",
+        "description": "Anticonvulsant / Neuropathic pain"
+      },
+      {
+        "name": "Piracetam",
+        "description": "Nootropic"
+      },
+      {
+        "name": "Sodium Valproate",
+        "description": "Antiepileptic"
+      },
+      {
+        "name": "Methylcobalamin (Vitamin B12)",
+        "description": "Neuroprotective / Nutritional support"
+      }
+    ],
+    "Cardiovascular & Hypertension": [
+      {
+        "name": "Amlodipine Besylate",
+        "description": "Calcium channel blocker"
+      },
+      {
+        "name": "Betaxolol",
+        "description": "Beta-blocker"
+      },
+      {
+        "name": "Irbesartan",
+        "description": "ARB"
+      },
+      {
+        "name": "Lisinopril",
+        "description": "ACE inhibitor"
+      },
+      {
+        "name": "Simvastatin",
+        "description": "Statin"
+      },
+      {
+        "name": "Atorvastatin",
+        "description": "Statin"
+      },
+      {
+        "name": "Rosuvastatin Calcium",
+        "description": "Statin"
+      },
+      {
+        "name": "Finasteride",
+        "description": "BPH / Androgenetic alopecia (also hormonal)"
+      },
+      {
+        "name": "Dutasteride",
+        "description": "BPH (also hormonal)"
+      }
+    ],
+    "Anti-infectives / Antibiotics / Antifungals / Antiseptics": [
+      {
+        "name": "Amoxicillin",
+        "description": "Penicillin antibiotic"
+      },
+      {
+        "name": "Ampicillin Trihydrate",
+        "description": "Penicillin antibiotic"
+      },
+      {
+        "name": "Azithromycin Dihydrate",
+        "description": "Macrolide antibiotic"
+      },
+      {
+        "name": "Ciprofloxacin",
+        "description": "Fluoroquinolone"
+      },
+      {
+        "name": "Clindamycin Phosphate",
+        "description": "Lincosamide"
+      },
+      {
+        "name": "Levofloxacin",
+        "description": "Fluoroquinolone"
+      },
+      {
+        "name": "Moxifloxacin",
+        "description": "Fluoroquinolone"
+      },
+      {
+        "name": "Metronidazole",
+        "description": "Nitroimidazole"
+      },
+      {
+        "name": "Secnidazole",
+        "description": "Antiprotozoal"
+      },
+      {
+        "name": "Tinidazole",
+        "description": "Antiprotozoal"
+      },
+      {
+        "name": "Trimethoprim",
+        "description": "Antibacterial"
+      },
+      {
+        "name": "Amikacin Sulphate",
+        "description": "Aminoglycoside"
+      },
+      {
+        "name": "Fusidic Acid",
+        "description": "Topical antibiotic"
+      },
+      {
+        "name": "Clotrimazole",
+        "description": "Antifungal"
+      },
+      {
+        "name": "Povidone Iodine",
+        "description": "Antiseptic"
+      }
+    ],
+    "Anti-inflammatory / Pain Management / Corticosteroids": [
+      {
+        "name": "Diclofenac Epolamine / Potassium / Sodium",
+        "description": "NSAIDs"
+      },
+      {
+        "name": "Ibuprofen",
+        "description": "NSAID"
+      },
+      {
+        "name": "Ketoprofen",
+        "description": "NSAID"
+      },
+      {
+        "name": "Paracetamol",
+        "description": "Analgesic / Antipyretic"
+      },
+      {
+        "name": "Methocarbamol",
+        "description": "Muscle relaxant"
+      },
+      {
+        "name": "Dexamethasone",
+        "description": "Corticosteroid"
+      },
+      {
+        "name": "Dexamethasone Acetate",
+        "description": "Corticosteroid"
+      },
+      {
+        "name": "Dexamethasone Sodium Phosphate",
+        "description": "Corticosteroid"
+      },
+      {
+        "name": "Deflazacort",
+        "description": "Corticosteroid"
+      },
+      {
+        "name": "Betamethasone / Dipropionate / Sodium Phosphate / Valerate",
+        "description": "Corticosteroid"
+      },
+      {
+        "name": "Prednisolone / Acetate / Sodium Phosphate",
+        "description": "Corticosteroid"
+      },
+      {
+        "name": "Methylprednisolone / Aceponate / Hemisuccinate",
+        "description": "Corticosteroid"
+      },
+      {
+        "name": "Triamcinolone Acetonide",
+        "description": "Corticosteroid"
+      },
+      {
+        "name": "Beclomethasone / Dipropionate",
+        "description": "Corticosteroid"
+      },
+      {
+        "name": "Mometasone Furoate",
+        "description": "Corticosteroid"
+      },
+      {
+        "name": "Clobetasol Propionate",
+        "description": "Potent topical corticosteroid"
+      },
+      {
+        "name": "Fluocinolone Acetonide",
+        "description": "Corticosteroid"
+      },
+      {
+        "name": "Hydrocortisone Acetate",
+        "description": "Corticosteroid"
+      }
+    ],
+    "Diabetes / Endocrinology": [
+      {
+        "name": "Empagliflozin",
+        "description": "SGLT2 inhibitor"
+      },
+      {
+        "name": "Metformin",
+        "description": "Biguanide"
+      },
+      {
+        "name": "Sitagliptin",
+        "description": "DPP-4 inhibitor"
+      }
+    ],
+    "Anticoagulants / Antithrombotics": [
+      {
+        "name": "Apixaban",
+        "description": "Factor Xa inhibitor"
+      }
+    ],
+    "Hormones (Female Health / Fertility)": [
+      {
+        "name": "Hydroxyprogesterone Caproate",
+        "description": "Progestin (preterm labor, fertility)"
+      },
+      {
+        "name": "Medroxyprogesterone Acetate",
+        "description": "Progestin (HRT, contraception)"
+      }
+    ],
+    "Digestive System / Gastrointestinal": [
+      {
+        "name": "Esomeprazole",
+        "description": "Proton Pump Inhibitor (PPI)"
+      },
+      {
+        "name": "Vonoprazan",
+        "description": "Potassium-competitive acid blocker (P-CAB)"
+      },
+      {
+        "name": "Simethicone",
+        "description": "Antiflatulent"
+      },
+      {
+        "name": "Magnesium Carbonate",
+        "description": "Antacid / laxative"
+      },
+      {
+        "name": "Sodium Citrate",
+        "description": "Alkalizer"
+      }
+    ],
+    "Vitamins / Minerals / Nutrition": [
+      {
+        "name": "Biotin",
+        "description": "Vitamin B7"
+      },
+      {
+        "name": "Ferric Maltol",
+        "description": "Iron supplement"
+      },
+      {
+        "name": "Methylcobalamin (Vitamin B12)",
+        "description": "Neurovitamin"
+      },
+      {
+        "name": "Aspartame",
+        "description": "Sweetener"
+      }
+    ],
+    "Topical / Dermatological": [
+      {
+        "name": "Clobetasol Propionate",
+        "description": "Corticosteroid"
+      },
+      {
+        "name": "Fluocinolone Acetonide",
+        "description": "Corticosteroid"
+      },
+      {
+        "name": "Mometasone Furoate",
+        "description": "Corticosteroid"
+      },
+      {
+        "name": "Clotrimazole",
+        "description": "Antifungal"
+      },
+      {
+        "name": "Isotretinoin",
+        "description": "Acne treatment"
+      },
+      {
+        "name": "Fusidic Acid",
+        "description": "Antibiotic"
+      }
+    ],
+    "Metabolic / Miscellaneous": [
+      {
+        "name": "Coenzyme Q10",
+        "description": "Antioxidant"
+      },
+      {
+        "name": "Glucosamine",
+        "description": "Joint health"
+      },
+      {
+        "name": "Chondroitin Sulphate",
+        "description": "Joint health"
+      },
+      {
+        "name": "L-Carnitine (Base, HCL, Fumarate, Tartrate, Injection)",
+        "description": "Fat metabolism"
+      },
+      {
+        "name": "Lidocaine",
+        "description": "Local anesthetic"
+      },
+      {
+        "name": "Caffeine Anhydrous",
+        "description": "CNS stimulant"
+      },
+      {
+        "name": "Vinblastine Sulfate",
+        "description": "Chemotherapy agent"
+      }
+    ]
+  }
 }
