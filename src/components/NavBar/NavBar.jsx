@@ -351,6 +351,7 @@ const NavBar = () => {
 
         <div className="flex flex-col gap-4 px-6 text-sm mt-30">
           <div className="flex mt-2 items-center">
+            <span className="text-lg tracking-wider mr-2">WhatsApp: </span>
             <a
               href="https://wa.me/201023150519"
               target="_blank"
