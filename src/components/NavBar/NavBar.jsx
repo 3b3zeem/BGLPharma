@@ -349,24 +349,25 @@ const NavBar = () => {
           </div>
         </nav>
 
-        <div className="px-6 text-sm mt-30">
+        <div className="flex flex-col gap-4 px-6 text-sm mt-30">
+          <div className="flex mt-2 items-center">
+            <a
+              href="https://wa.me/201023150519"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl bg-white p-2 text-green-500 rounded"
+            >
+              <FaWhatsapp size={30} />{" "}
+            </a>
+          </div>
           <div className="flex items-center gap-2 mb-1">
             <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white flex-shrink-0">
               <Phone size={18} />
             </div>
             <ul>
-              <li>+201091040946 +201023150519</li>
-              <div className="flex mt-2 items-center">
-                <span className="text-lg tracking-wider mr-2">WhatsApp: </span>
-                <a
-                  href="https://wa.me/201023150519"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-2xl bg-white p-2 text-green-500 rounded"
-                >
-                  <FaWhatsapp size={30} />{" "}
-                </a>
-              </div>
+              <li>
+                +201091040946 <br /> +201023150519 <br /> +201023150519
+              </li>
             </ul>
           </div>
           <div className="flex items-center gap-2">
