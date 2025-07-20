@@ -115,7 +115,7 @@ const Contact = () => {
               <div className="flex flex-col gap-1">
                 <p className="text-lg tracking-wider">Call Us 7/24</p>
                 <p className="md:text-xl text-lg font-semibold mt-1 flex ">
-                  +201091040946 {"  "} +201094400759
+                  +201091040946 {" "} +201094400759 {" "} +201023150519
                 </p>
 
                 <div className="flex mt-2 items-center">

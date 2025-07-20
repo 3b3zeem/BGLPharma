@@ -167,7 +167,7 @@ const NavBar = () => {
             <div className="flex flex-col">
               <div className="flex flex-col gap-2">
                 <span>Call Us</span>
-                +201091040946 +201094400759
+                +201091040946 +201094400759 +201023150519
               </div>
               <div className="flex mt-2 items-center">
                 <span className="text-lg tracking-wider mr-2">WhatsApp: </span>

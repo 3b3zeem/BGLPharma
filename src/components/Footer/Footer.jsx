@@ -215,6 +215,7 @@ const Footer = () => {
               <p className="text-white/80 font-sm flex flex-col">
                 <span>+201091040946</span>
                 <span>+201094400759</span>
+                <span>+201023150519</span>
               </p>
               <div className="flex mt-2 items-center">
                 <span className="text-lg tracking-wider mr-2 text-white">WhatsApp: </span>
