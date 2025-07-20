@@ -199,7 +199,14 @@ const NavBar = () => {
         }`}
       >
         <div className="flex justify-between items-center px-6 py-4">
-          <img src="/logo.png" alt="Logo" width={120} />
+          <div
+            className="flex items-center"
+            onClick={() => setSidebarOpen(false)}
+          >
+            <Link to={"/"}>
+              <img src="/logo.png" alt="Logo" width={80} />
+            </Link>
+          </div>
           <button
             onClick={() => setSidebarOpen(false)}
             className="text-white cursor-pointer border p-1 border-white hover:bg-white hover:text-[#3a5a7c] rounded transition duration-550"
