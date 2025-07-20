@@ -179,7 +179,7 @@ const Contact = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="flex flex-col items-start gap-3 mb-2">
+            {/* <div className="flex flex-col items-start gap-3 mb-2">
               <p className="font-semibold text-[18px]">Follow Social:</p>
               <div className="flex gap-4">
                 <a href="#" className="bg-white p-2 rounded-full">
@@ -195,7 +195,7 @@ const Contact = () => {
                   <Youtube color="black" />
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT – Contact Form */}

@@ -86,7 +86,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4">
+          {/* <div className="flex flex-col gap-4">
             <p className="text-md leading-relaxed text-white/90 max-w-sm">
               Contact us via our phone numbers, our headquarter and social media
             </p>
@@ -116,7 +116,7 @@ const Footer = () => {
                 <Youtube size={20} />
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Navigation Links Section */}
