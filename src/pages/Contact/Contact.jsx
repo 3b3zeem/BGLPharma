@@ -12,6 +12,7 @@ import {
   X,
   Youtube,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -118,14 +119,16 @@ const Contact = () => {
                 </p>
 
                 <div className="flex mt-2 items-center">
-                  <span className="text-lg tracking-wider">WhatsApp: </span>
+                  <span className="text-lg tracking-wider mr-2">
+                    WhatsApp:{" "}
+                  </span>
                   <a
                     href="https://wa.me/201023150519"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="ms-1 hover:text-[#846dcb] transition duration-200"
+                    className="text-2xl bg-white p-2 text-green-500 rounded"
                   >
-                    +201023150519{" "}
+                    <FaWhatsapp size={30} />{" "}
                   </a>
                 </div>
               </div>

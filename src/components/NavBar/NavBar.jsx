@@ -10,8 +10,10 @@ import {
   Linkedin,
   Youtube,
   PhoneCall,
+  Mail,
 } from "lucide-react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
 const NavBar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -167,15 +169,15 @@ const NavBar = () => {
                 <span>Call Us</span>
                 +201091040946 +201094400759
               </div>
-              <div className="flex items-center">
-                <span>WhatsApp: </span>
+              <div className="flex mt-2 items-center">
+                <span className="text-lg tracking-wider mr-2">WhatsApp: </span>
                 <a
                   href="https://wa.me/201023150519"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ms-1 hover:text-[#270195] transition duration-200"
+                  className="text-2xl bg-white p-2 text-green-500 rounded"
                 >
-                  +201023150519{" "}
+                  <FaWhatsapp size={30} />{" "}
                 </a>
               </div>
             </div>
@@ -342,14 +344,36 @@ const NavBar = () => {
 
         <div className="px-6 text-sm mt-30">
           <div className="flex items-center gap-2 mb-1">
-            <Phone size={16} /> <br />
+            <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white flex-shrink-0">
+              <Phone size={18} />
+            </div>
             <ul>
               <li>+201091040946 +201023150519</li>
-              <li>+201094400759</li>
+              <div className="flex mt-2 items-center">
+                <span className="text-lg tracking-wider mr-2">WhatsApp: </span>
+                <a
+                  href="https://wa.me/201023150519"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-2xl bg-white p-2 text-green-500 rounded"
+                >
+                  <FaWhatsapp size={30} />{" "}
+                </a>
+              </div>
             </ul>
           </div>
           <div className="flex items-center gap-2">
-            <span className="font-bold">@</span> Info@bglpharma.com
+            <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white flex-shrink-0">
+              <Mail size={18} />
+            </div>
+            <div className="flex flex-col">
+              <a href="mailto:Info@bglpharma.com" className="text-[14px] mt-1">
+                Info@bglpharma.com
+              </a>
+              <a href="mailto:sales@bglpharma.com" className="text-[14px] mt-1">
+                sales@bglpharma.com
+              </a>
+            </div>
           </div>
         </div>
         {/* socials */}

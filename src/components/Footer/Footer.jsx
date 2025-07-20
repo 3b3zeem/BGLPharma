@@ -15,6 +15,7 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 import useContact from "../../Hooks/useContact";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   const formRef = useRef(null);
@@ -215,15 +216,15 @@ const Footer = () => {
                 <span>+201091040946</span>
                 <span>+201094400759</span>
               </p>
-              <div className="flex text-white/80 text-sm mt-2 items-center">
-                <span>WhatsApp: </span>
+              <div className="flex mt-2 items-center">
+                <span className="text-lg tracking-wider mr-2 text-white">WhatsApp: </span>
                 <a
                   href="https://wa.me/201023150519"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ms-1 hover:text-[#270195] transition duration-200"
+                  className="text-2xl bg-white p-2 text-green-500 rounded"
                 >
-                  +201023150519{" "}
+                  <FaWhatsapp size={30} />{" "}
                 </a>
               </div>
             </div>
