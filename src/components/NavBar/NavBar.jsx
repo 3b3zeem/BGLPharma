@@ -162,9 +162,22 @@ const NavBar = () => {
             <span className="bg-[#270195] w-10 h-10 lg:w-15 lg:h-15 rounded-full border-3 border-[#918ca1] flex justify-center items-center transition duration-300">
               <PhoneCall className="w-3 h-3 lg:w-6 lg:h-6" />
             </span>
-            <div className="flex flex-col gap-2">
-              <span>Call Us</span>
-              +201091040946 +201023150519 +201094400759
+            <div className="flex flex-col">
+              <div className="flex flex-col gap-2">
+                <span>Call Us</span>
+                +201091040946 +201094400759
+              </div>
+              <div className="flex items-center">
+                <span>WhatsApp: </span>
+                <a
+                  href="https://wa.me/201023150519"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ms-1 hover:text-[#270195] transition duration-200"
+                >
+                  +201023150519{" "}
+                </a>
+              </div>
             </div>
           </span>
         </div>

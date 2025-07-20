@@ -213,9 +213,19 @@ const Footer = () => {
               <h3 className="text-white font-semibold">Phone Call:</h3>
               <p className="text-white/80 font-sm flex flex-col">
                 <span>+201091040946</span>
-                <span>+201023150519</span>
                 <span>+201094400759</span>
               </p>
+              <div className="flex text-white/80 text-sm mt-2 items-center">
+                <span>WhatsApp: </span>
+                <a
+                  href="https://wa.me/201023150519"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ms-1 hover:text-[#270195] transition duration-200"
+                >
+                  +201023150519{" "}
+                </a>
+              </div>
             </div>
           </div>
 

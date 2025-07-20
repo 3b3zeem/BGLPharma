@@ -114,8 +114,20 @@ const Contact = () => {
               <div className="flex flex-col gap-1">
                 <p className="text-lg tracking-wider">Call Us 7/24</p>
                 <p className="md:text-xl text-lg font-semibold mt-1 flex ">
-                  +201091040946 {"  "} +201023150519 +201094400759
+                  +201091040946 {"  "} +201094400759
                 </p>
+
+                <div className="flex mt-2 items-center">
+                  <span className="text-lg tracking-wider">WhatsApp: </span>
+                  <a
+                    href="https://wa.me/201023150519"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ms-1 hover:text-[#846dcb] transition duration-200"
+                  >
+                    +201023150519{" "}
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -128,10 +140,16 @@ const Contact = () => {
               </div>
               <div className="flex flex-col items-start">
                 <p className="text-md text-white/80">Make a Quote</p>
-                <a href="mailto:Info@bglpharma.com" className="font-[700] sm:text-[24px] text-[14px] mt-1">
+                <a
+                  href="mailto:Info@bglpharma.com"
+                  className="font-[700] sm:text-[24px] text-[14px] mt-1"
+                >
                   Info@bglpharma.com
                 </a>
-                <a href="mailto:sales@bglpharma.com" className="font-[700] sm:text-[24px] text-[14px] mt-1">
+                <a
+                  href="mailto:sales@bglpharma.com"
+                  className="font-[700] sm:text-[24px] text-[14px] mt-1"
+                >
                   sales@bglpharma.com
                 </a>
               </div>
