@@ -377,7 +377,7 @@ const NavBar = () => {
           </div>
         </div>
         {/* socials */}
-        <div className="flex gap-4 px-6 mt-6">
+        {/* <div className="flex gap-4 px-6 mt-6">
           <a
             href="#"
             className="px-2 py-3 border border-[#2c364f] hover:bg-white transition duration-200"
@@ -402,7 +402,7 @@ const NavBar = () => {
           >
             <Youtube size={24} className="text-[#2266b3]" />
           </a>
-        </div>
+        </div> */}
       </div>
       {/* Overlay */}
       {sidebarOpen && (
