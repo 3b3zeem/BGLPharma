@@ -11,6 +11,7 @@ import {
   X,
   Youtube,
   ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
@@ -20,7 +21,7 @@ import { FaWhatsapp } from "react-icons/fa";
 const Footer = () => {
   const formRef = useRef(null);
   const { data, loading, error, sendContact } = useContact();
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarProductOpen, setSidebarProductOpen] = useState(false);
 
   const location = useLocation();
   const isActiveParent =
@@ -134,21 +135,39 @@ const Footer = () => {
             ))}
             <div className="relative group">
               <span
-                className={`flex items-center text-white/80 hover:text-white transition-all duration-300 py-2 border-b border-transparent hover:border-white/30 hover:translate-x-2 ${
+                onClick={() => setSidebarProductOpen((open) => !open)}
+                className={`flex items-center text-white/80 hover:text-white transition-all duration-300 py-2 border-b border-transparent hover:border-white/30 hover:translate-x-2 cursor-pointer ${
                   isActiveParent
                     ? "bg-opacity-10 text-[#270195]"
                     : "hover:text-[#270195] text-white"
                 }`}
               >
-                PRODUCT <ChevronDown size={16} className="ml-1" />
+                PRODUCT{" "}
+                {sidebarProductOpen ? (
+                  <ChevronUp size={16} className="ml-1" />
+                ) : (
+                  <ChevronDown size={16} className="ml-1" />
+                )}
               </span>
 
-              <div className="pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 opacity-0 transition-opacity duration-300 absolute -left-5 top-full z-[100]">
+              <div
+                className={`absolute -left-5 top-full z-[100] overflow-hidden transition-all duration-300 ease-in-out ${
+                  sidebarProductOpen
+                    ? "pointer-events-auto"
+                    : "pointer-events-none"
+                }`}
+                style={{
+                  maxHeight: sidebarProductOpen ? "1000px" : "0",
+                  opacity: sidebarProductOpen ? 1 : 0,
+                }}
+              >
                 <ul className="bg-white text-[#270195] rounded shadow-lg mt-2 min-w-[200px]">
                   <li>
                     <Link
                       to="/Food-Additives"
-                      onClick={() => setSidebarOpen(false)}
+                      onClick={() => {
+                        setSidebarProductOpen(false);
+                      }}
                       className={`block px-4 py-2 transition-colors duration-200 ${
                         location.pathname === "/Food-Additives"
                           ? "bg-[#e6f0fa] font-semibold"
@@ -161,7 +180,9 @@ const Footer = () => {
                   <li>
                     <Link
                       to="/Feed-Additives"
-                      onClick={() => setSidebarOpen(false)}
+                      onClick={() => {
+                        setSidebarProductOpen(false);
+                      }}
                       className={`block px-4 py-2 transition-colors duration-200 ${
                         location.pathname === "/Feed-Additives"
                           ? "bg-[#e6f0fa] font-semibold"
@@ -174,7 +195,9 @@ const Footer = () => {
                   <li>
                     <Link
                       to="/API-Intermediates"
-                      onClick={() => setSidebarOpen(false)}
+                      onClick={() => {
+                        setSidebarProductOpen(false);
+                      }}
                       className={`block px-4 py-2 transition-colors duration-200 ${
                         location.pathname === "/API-Intermediates"
                           ? "bg-[#e6f0fa] font-semibold"
@@ -218,7 +241,9 @@ const Footer = () => {
                 <span>+201023150519</span>
               </p>
               <div className="flex mt-2 items-center">
-                <span className="text-lg tracking-wider mr-2 text-white">WhatsApp: </span>
+                <span className="text-lg tracking-wider mr-2 text-white">
+                  WhatsApp:{" "}
+                </span>
                 <a
                   href="https://wa.me/201023150519"
                   target="_blank"
