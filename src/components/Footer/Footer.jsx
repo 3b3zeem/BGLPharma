@@ -334,48 +334,6 @@ const Footer = () => {
               />
             </div>
 
-            {/* <div>
-              <label className="block text-white text-sm font-medium mb-2">
-                Website
-              </label>
-              <input
-                type="url"
-                name="website"
-                value={formData.website}
-                onChange={handleInputChange}
-                placeholder="Website"
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:border-white/50 focus:bg-white/15 transition-all duration-300"
-              />
-            </div>
-
-            <div>
-              <label className="block text-white text-sm font-medium mb-2">
-                Country
-              </label>
-              <input
-                type="text"
-                name="country"
-                value={formData.country}
-                onChange={handleInputChange}
-                placeholder="Country"
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:border-white/50 focus:bg-white/15 transition-all duration-300"
-              />
-            </div>
-
-            <div>
-              <label className="block text-white text-sm font-medium mb-2">
-                Company
-              </label>
-              <input
-                type="text"
-                name="company"
-                value={formData.company}
-                onChange={handleInputChange}
-                placeholder="Company"
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:border-white/50 focus:bg-white/15 transition-all duration-300"
-              />
-            </div> */}
-
             <div>
               <label className="block text-white text-sm font-medium mb-2">
                 Message
