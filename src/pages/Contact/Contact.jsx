@@ -22,40 +22,44 @@ import useContact from "../../Hooks/useContact";
 import toast from "react-hot-toast";
 
 const Contact = () => {
-  const formRef = useRef(null);
-
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
-
   const { data, loading, error, sendContact } = useContact();
-
+  const formRef = useRef(null);
   const lastToast = useRef({ error: null, message: null });
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (loading) return;
+
     const name = e.target.elements.name.value.trim();
     const email = e.target.elements.email.value.trim();
     const message = e.target.elements.message.value.trim();
-    if (!name || !email || !message) return;
+
+    if (!name || !email || !message) {
+      toast.error("Please fill in all fields");
+      return;
+    }
+
     sendContact(name, email, message);
   };
 
   useEffect(() => {
     if (error && error !== lastToast.current.error) {
-      toast.error(error);
+      toast.error(error || "Something went wrong");
       lastToast.current.error = error;
     }
-    if (data && data.message && data.message !== lastToast.current.message) {
-      toast.success(data.message);
+  }, [error]);
+
+  useEffect(() => {
+    if (data?.message && data.message !== lastToast.current.message) {
+      toast.success(data.message || "Message sent successfully");
       lastToast.current.message = data.message;
+
       if (formRef.current) {
         formRef.current.reset();
       }
     }
-  }, [error, data]);
+  }, [data]);
 
   return (
     <div className="w-full">
@@ -264,9 +268,8 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className={`bg-[#270195] text-white customEffect cursor-pointer group transition duration-300 ${
-                  loading ? "opacity-60 pointer-events-none" : ""
-                }`}
+                className={`bg-[#270195] text-white customEffect cursor-pointer group transition duration-300 ${loading ? "opacity-60 pointer-events-none" : ""
+                  }`}
               >
                 <span className="flex items-center justify-center gap-2 px-8 py-5">
                   {loading ? "Sending..." : "Send Message"}{" "}
