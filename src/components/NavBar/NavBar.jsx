@@ -172,7 +172,7 @@ const NavBar = () => {
             <div className="flex flex-col">
               <div className="flex flex-col gap-2">
                 <span>Call Us:</span>
-                <p className="text-white/80 font-sm flex gap-2">
+                <p className="text-white/80 font-sm flex gap-2 flex-wrap">
                   <a href="tel:+201091040946" className="hover:underline cursor-pointer">
                     +201091040946
                   </a>

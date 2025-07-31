@@ -125,7 +125,7 @@ const Contact = () => {
               </div>
               <div className="flex flex-col gap-1">
                 <p className="text-lg tracking-wider">Call Us 7/24</p>
-                <p className="md:text-xl text-lg font-semibold mt-1 flex gap-2">
+                <p className="md:text-xl text-lg font-semibold mt-1 flex gap-2 flex-wrap">
                   <a href="tel:+201091040946" className="hover:underline cursor-pointer">
                     +201091040946
                   </a>

@@ -254,7 +254,7 @@ const Footer = () => {
             </div>
             <div>
               <h3 className="text-white font-semibold">Phone Call:</h3>
-              <p className="text-white/80 font-sm flex flex-col">
+              <p className="text-white/80 font-sm flex flex-col flex-wrap">
                 <a
                   href="tel:+201091040946"
                   className="hover:underline cursor-pointer"
