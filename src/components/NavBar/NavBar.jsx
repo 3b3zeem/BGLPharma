@@ -171,8 +171,18 @@ const NavBar = () => {
             </span>
             <div className="flex flex-col">
               <div className="flex flex-col gap-2">
-                <span>Call Us</span>
-                +201091040946 +201094400759 +201023150519
+                <span>Call Us:</span>
+                <p className="text-white/80 font-sm flex gap-2">
+                  <a href="tel:+201091040946" className="hover:underline cursor-pointer">
+                    +201091040946
+                  </a>
+                  <a href="tel:+201094400759" className="hover:underline cursor-pointer">
+                    +201094400759
+                  </a>
+                  <a href="tel:+201023150519" className="hover:underline cursor-pointer">
+                    +201023150519
+                  </a>
+                </p>
               </div>
               <div className="flex mt-2 items-center">
                 <span className="text-lg tracking-wider mr-2">WhatsApp: </span>
@@ -345,7 +355,17 @@ const NavBar = () => {
             </div>
             <ul>
               <li>
-                +201091040946 <br /> +201023150519 <br /> +201023150519
+                <p className="text-white/80 font-sm flex flex-col">
+                  <a href="tel:+201091040946" className="hover:underline cursor-pointer">
+                    +201091040946
+                  </a>
+                  <a href="tel:+201094400759" className="hover:underline cursor-pointer">
+                    +201094400759
+                  </a>
+                  <a href="tel:+201023150519" className="hover:underline cursor-pointer">
+                    +201023150519
+                  </a>
+                </p>
               </li>
             </ul>
           </div>

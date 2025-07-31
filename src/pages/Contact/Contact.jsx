@@ -125,8 +125,16 @@ const Contact = () => {
               </div>
               <div className="flex flex-col gap-1">
                 <p className="text-lg tracking-wider">Call Us 7/24</p>
-                <p className="md:text-xl text-lg font-semibold mt-1 flex ">
-                  +201091040946 +201094400759 +201023150519
+                <p className="md:text-xl text-lg font-semibold mt-1 flex gap-2">
+                  <a href="tel:+201091040946" className="hover:underline cursor-pointer">
+                    +201091040946
+                  </a>
+                  <a href="tel:+201094400759" className="hover:underline cursor-pointer">
+                    +201094400759
+                  </a>
+                  <a href="tel:+201023150519" className="hover:underline cursor-pointer">
+                    +201023150519
+                  </a>
                 </p>
 
                 <div className="flex mt-2 items-center">

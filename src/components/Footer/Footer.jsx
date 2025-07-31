@@ -255,9 +255,24 @@ const Footer = () => {
             <div>
               <h3 className="text-white font-semibold">Phone Call:</h3>
               <p className="text-white/80 font-sm flex flex-col">
-                <span>+201091040946</span>
-                <span>+201094400759</span>
-                <span>+201023150519</span>
+                <a
+                  href="tel:+201091040946"
+                  className="hover:underline cursor-pointer"
+                >
+                  +201091040946
+                </a>
+                <a
+                  href="tel:+201094400759"
+                  className="hover:underline cursor-pointer"
+                >
+                  +201094400759
+                </a>
+                <a
+                  href="tel:+201023150519"
+                  className="hover:underline cursor-pointer"
+                >
+                  +201023150519
+                </a>
               </p>
               <div className="flex mt-2 items-center">
                 <span className="text-lg tracking-wider mr-2 text-white">
