@@ -9,6 +9,7 @@ const useContact = () => {
     setLoading(true);
     setError(null);
 
+    // Production_deploy : https://bgl-api-contact.vercel.app/api/BGLContact
     try {
       const response = await fetch(
         "https://bgl-api-contact.vercel.app/api/BGLContact",

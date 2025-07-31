@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Meta from "../../components/Meta/Meta";
 import contact from "../../assets/contact.jpg";
 import {
@@ -25,22 +25,25 @@ const Contact = () => {
   const { data, loading, error, sendContact } = useContact();
   const formRef = useRef(null);
   const lastToast = useRef({ error: null, message: null });
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (loading) return;
 
-    const name = e.target.elements.name.value.trim();
-    const email = e.target.elements.email.value.trim();
-    const message = e.target.elements.message.value.trim();
+    const trimmedName = name.trim();
+    const trimmedEmail = email.trim();
+    const trimmedMessage = message.trim();
 
-    if (!name || !email || !message) {
+    if (!trimmedName || !trimmedEmail || !trimmedMessage) {
       toast.error("Please fill in all fields");
       return;
     }
 
-    sendContact(name, email, message);
+    sendContact(trimmedName, trimmedEmail, trimmedMessage);
   };
 
   useEffect(() => {
@@ -54,6 +57,10 @@ const Contact = () => {
     if (data?.message && data.message !== lastToast.current.message) {
       toast.success(data.message || "Message sent successfully");
       lastToast.current.message = data.message;
+
+      setName("");
+      setEmail("");
+      setMessage("");
 
       if (formRef.current) {
         formRef.current.reset();
@@ -119,7 +126,7 @@ const Contact = () => {
               <div className="flex flex-col gap-1">
                 <p className="text-lg tracking-wider">Call Us 7/24</p>
                 <p className="md:text-xl text-lg font-semibold mt-1 flex ">
-                  +201091040946 {" "} +201094400759 {" "} +201023150519
+                  +201091040946 +201094400759 +201023150519
                 </p>
 
                 <div className="flex mt-2 items-center">
@@ -239,6 +246,8 @@ const Contact = () => {
                   <input
                     type="text"
                     name="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     placeholder="Your Name"
                     className="border border-gray-300 px-4 py-6 w-full focus-visible:outline-none focus-visible:border-[#270195] transition duration-300"
                     required
@@ -249,6 +258,8 @@ const Contact = () => {
                   <input
                     type="email"
                     name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="Your Email"
                     className="border border-gray-300 px-4 py-6 w-full focus-visible:outline-none focus-visible:border-[#270195] transition duration-300"
                     required
@@ -260,6 +271,8 @@ const Contact = () => {
                 <textarea
                   rows="5"
                   name="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   placeholder="Write Message"
                   className="border border-gray-300 px-4 py-6 w-full focus-visible:outline-none focus-visible:border-[#270195] transition duration-300"
                   required
@@ -268,8 +281,9 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className={`bg-[#270195] text-white customEffect cursor-pointer group transition duration-300 ${loading ? "opacity-60 pointer-events-none" : ""
-                  }`}
+                className={`bg-[#270195] text-white customEffect cursor-pointer group transition duration-300 ${
+                  loading ? "opacity-60 pointer-events-none" : ""
+                }`}
               >
                 <span className="flex items-center justify-center gap-2 px-8 py-5">
                   {loading ? "Sending..." : "Send Message"}{" "}

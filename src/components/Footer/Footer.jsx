@@ -22,6 +22,9 @@ const Footer = () => {
   const formRef = useRef(null);
   const { data, loading, error, sendContact } = useContact();
   const [sidebarProductOpen, setSidebarProductOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const location = useLocation();
   const isActiveParent =
@@ -35,26 +38,42 @@ const Footer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const name = e.target.elements.name.value.trim();
-    const email = e.target.elements.email.value.trim();
-    const message = e.target.elements.message.value.trim();
-    if (!name || !email || !message) return;
-    sendContact(name, email, message);
+
+    if (loading) return;
+
+    const trimmedName = name.trim();
+    const trimmedEmail = email.trim();
+    const trimmedMessage = message.trim();
+
+    if (!trimmedName || !trimmedEmail || !trimmedMessage) {
+      toast.error("Please fill in all fields");
+      return;
+    }
+
+    sendContact(trimmedName, trimmedEmail, trimmedMessage);
   };
 
   useEffect(() => {
     if (error && error !== lastToast.current.error) {
-      toast.error(error);
+      toast.error(error || "Something went wrong");
       lastToast.current.error = error;
     }
-    if (data && data.message && data.message !== lastToast.current.message) {
-      toast.success(data.message);
+  }, [error]);
+
+  useEffect(() => {
+    if (data?.message && data.message !== lastToast.current.message) {
+      toast.success(data.message || "Message sent successfully");
       lastToast.current.message = data.message;
+
+      setName("");
+      setEmail("");
+      setMessage("");
+
       if (formRef.current) {
         formRef.current.reset();
       }
     }
-  }, [error, data]);
+  }, [data]);
 
   const navigationLinks = [
     { name: "HOME", href: "/" },
@@ -315,8 +334,10 @@ const Footer = () => {
               <input
                 type="text"
                 name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 required
-                placeholder="Name"
+                placeholder="Your Name"
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:border-white/50 focus:bg-white/15 transition-all duration-300"
               />
             </div>
@@ -328,8 +349,10 @@ const Footer = () => {
               <input
                 type="email"
                 name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
-                placeholder="Email"
+                placeholder="Your Email"
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:border-white/50 focus:bg-white/15 transition-all duration-300"
               />
             </div>
@@ -340,9 +363,11 @@ const Footer = () => {
               </label>
               <textarea
                 name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 required
-                placeholder="Message"
-                rows="4"
+                placeholder="Write Message"
+                rows="5"
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:border-white/50 focus:bg-white/15 transition-all duration-300 resize-vertical"
               />
             </div>
