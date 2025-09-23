@@ -5,7 +5,6 @@ import React from "react";
 import Up_top from "./components/Up-to-top/Up-to-top";
 import { Toaster } from "react-hot-toast";
 import PreventImageDragAndRightClick from "./utils/PreventImageDragAndRightClick";
-import "./utils/i18n";
 import "aos/dist/aos.css";
 
 import "@fontsource/roboto/300.css";

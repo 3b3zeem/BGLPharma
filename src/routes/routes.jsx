@@ -5,8 +5,6 @@ import NotFound from "../components/NotFound/NotFound.jsx";
 import Loader from "./../layouts/Loader";
 import FoodAdditives from "../pages/Products/Food Additives/FoodAdditives.jsx";
 import FeedAdditives from "../pages/Products/Feed Additives/FeedAdditives.jsx";
-import Chemicals from "../pages/Products/Chemicals.jsx";
-import CosmeticIngredients from "../pages/Products/CosmeticIngredients.jsx";
 import APIIntermediates from "../pages/Products/API Intermediates/APIIntermediates.jsx";
 
 const Home = lazy(() => import("../pages/Home/Home.jsx"));
@@ -55,22 +53,6 @@ const routes = createBrowserRouter([
         element: (
           <Suspense fallback={<Loader />}>
             <FeedAdditives />
-          </Suspense>
-        ),
-      },
-      {
-        path: "Chemicals",
-        element: (
-          <Suspense fallback={<Loader />}>
-            <Chemicals />
-          </Suspense>
-        ),
-      },
-      {
-        path: "Cosmetic-Ingredients",
-        element: (
-          <Suspense fallback={<Loader />}>
-            <CosmeticIngredients />
           </Suspense>
         ),
       },
