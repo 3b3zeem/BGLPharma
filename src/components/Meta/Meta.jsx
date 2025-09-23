@@ -3,15 +3,15 @@ import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 
 function Meta({
-  title = "MySite",
-  description = "Welcome to MySite",
-  keywords = "ecommerce, shop, online store",
-  image = "/favicon.jpg",
+  title = "BGLPharma",
+  description = "Welcome to BGLPharma, your trusted partner in pharmaceutical solutions.",
+  keywords = "pharma, medicine, healthcare",
+  image = "/logo.png",
   url,
 }) {
   const location = useLocation();
   const currentUrl = url || `${window.location.origin}${location.pathname}`;
-  const fullTitle = `${title} - BGL Pharma`;
+  const fullTitle = title ? `${title} | BGLPharma` : "BGLPharma";
 
   return (
     <Helmet key={location.pathname}>
@@ -20,8 +20,10 @@ function Meta({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
 
+      <link rel="canonical" href={currentUrl} />
+
       {/* Favicon */}
-      <link rel="icon" href={image} type="image/jpg" />
+      <link rel="icon" href={image} type="image/png" />
 
       {/* Open Graph */}
       <meta property="og:type" content="website" />
