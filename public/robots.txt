@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bglpharma.com/sitemap.xml
